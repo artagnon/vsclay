@@ -32,7 +32,7 @@
         "scopeName": "text.claytext",
         "path": "./syntax/claytext.tmGrammar.json",
         "embeddedLanguages": {
-          "meta.embedded.block.latex": "latex"
+          "meta.embedded.latex": "latex"
         }
       }
     ]

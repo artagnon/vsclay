@@ -4,7 +4,7 @@
     {
       "begin": "\\[\\[",
       "end": "\\]\\]",
-      "contentName": "markup.raw.verbatim.claytext"
+      "contentName": "markup.quote.claytext"
     },
     {
       "begin": "<<",
@@ -14,10 +14,42 @@
     {
       "begin": "\\$\\$",
       "end": "\\$\\$",
-      "contentName": "meta.embedded.block.latex"
+      "contentName": "meta.embedded.latex"
     },
     {
-      "match": "^(#) (.*)$",
+      "match": "\\$[^\\$+]\\$",
+      "name": "meta.embedded.latex"
+    },
+    {
+      "match": "(\\[)([^\\]]+)(\\])\\([^\\)]+\\)",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.claytext"
+        },
+        "2": {
+          "name": "markup.italic.claytext"
+        },
+        "3": {
+          "name": "keyword.operator.claytext"
+        }
+      }
+    },
+    {
+      "match": "(`)([^`]+)(`)",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.claytext"
+        },
+        "2": {
+          "name": "markup.quote.claytext"
+        },
+        "3": {
+          "name": "keyword.operator.claytext"
+        }
+      }
+    },
+    {
+      "match": "^(#) (.+)$",
       "captures": {
         "1": {
           "name": "keyword.operator.claytext"
@@ -28,19 +60,12 @@
       }
     },
     {
-      "match": "^\\(.*\\)$",
+      "match": "^\\(.+\\)$",
       "name": "markup.italic.claytext"
     },
     {
-      "match": "^(\\[d+\\]): (.*)$",
-      "captures": {
-        "1": {
-          "name": "language.keyword.operator.claytext"
-        },
-        "2": {
-          "name": "markup.italic.claytext"
-        }
-      }
+      "match": "^\\[\\^\\d+\\]:",
+      "name": "keyword.other.claytext"
     }
   ]
 }
