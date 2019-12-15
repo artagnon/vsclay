@@ -1,0 +1,1561 @@
+{
+  "fileTypes": ["clay"],
+  "keyEquivalent": "^~L",
+  "name": "claytext",
+  "patterns": [
+    {
+      "begin": "^[[$",
+      "end": "^]]$",
+      "contentName": "codeblock.claytext"
+    },
+    {
+      "begin": "^<<$",
+      "end": "^>>$",
+      "contentName": "images.claytext"
+    },
+    {
+      "comment": "This scope identifies partially typed commands such as `\\tab`. We use this to trigger “Command Completion” only when it makes sense.",
+      "match": "(?<=\\\\[\\w@]|\\\\[\\w@]{2}|\\\\[\\w@]{3}|\\\\[\\w@]{4}|\\\\[\\w@]{5}|\\\\[\\w@]{6})\\s",
+      "name": "meta.space-after-command.claytext"
+    },
+    {
+      "begin": "((\\\\)(?:usepackage|documentclass))((?:\\[[^\\[]*?\\])*)(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.preamble.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#optional-arg"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        }
+      },
+      "contentName": "support.class.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "name": "meta.preamble.claytext",
+      "patterns": [
+        {
+          "include": "$self"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)(?:include|input))(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.include.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        }
+      },
+      "contentName": "support.class.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "name": "meta.include.claytext",
+      "patterns": [
+        {
+          "include": "$self"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)((?:sub){0,2}section|(?:sub)?paragraph|chapter|part|addpart|addchap|addsec|minisec|frametitle)(?:\\*)?)((?:\\[[^\\[]*?\\]){0,2})(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "support.function.section.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "4": {
+          "patterns": [
+            {
+              "include": "#optional-arg"
+            }
+          ]
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        }
+      },
+      "comment": "this works OK with all kinds of crazy stuff as long as section is one line",
+      "contentName": "entity.name.section.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "name": "meta.function.section.$3.claytext",
+      "patterns": [
+        {
+          "include": "text.tex#braces"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "(^\\s*)?(?=\\\\begin\\{(lstlisting|minted|pyglist)\\})",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.whitespace.embedded.leading.claytext"
+        }
+      },
+      "end": "(?!\\G)(\\s*$\\n?)?",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.whitespace.embedded.trailing.claytext"
+        }
+      },
+      "patterns": [
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{(?:cpp|c)\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "source.cpp.embedded.claytext",
+          "patterns": [
+            {
+              "include": "source.cpp.embedded.claytext"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{css\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "source.css",
+          "patterns": [
+            {
+              "include": "source.css"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{html\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "text.html",
+          "patterns": [
+            {
+              "include": "text.html"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{java\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "source.java",
+          "patterns": [
+            {
+              "include": "source.java"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{(?:js|javascript)\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "source.js",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{lua\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "source.lua",
+          "patterns": [
+            {
+              "include": "source.lua"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{(?:python|py)\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "source.python",
+          "patterns": [
+            {
+              "include": "source.python"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{xml\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "yaml.xml",
+          "patterns": [
+            {
+              "include": "yaml.xml"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{minted\\}(?:\\[.*\\])?\\{yaml\\})",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "source.yaml",
+          "patterns": [
+            {
+              "include": "source.yaml"
+            }
+          ],
+          "end": "(\\\\end\\{minted\\})"
+        },
+        {
+          "begin": "(\\\\begin\\{(?:lstlisting|minted|pyglist)\\}(?:\\[.*\\])?)",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "#minted-env"
+                }
+              ]
+            }
+          },
+          "contentName": "meta.function.embedded.claytext",
+          "end": "(\\\\end\\{(?:lstlisting|minted|pyglist)\\})",
+          "name": "meta.embedded.block.generic"
+        }
+      ]
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{(cppcode(?:\\*)?)\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.cpp.embedded.claytext",
+      "patterns": [
+        {
+          "include": "source.cpp.embedded.claytext"
+        },
+        {
+          "include": "source.cpp"
+        }
+      ],
+      "end": "(\\\\end\\{\\2\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{(hscode(?:\\*)?)\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.haskell",
+      "patterns": [
+        {
+          "include": "source.haskell"
+        }
+      ],
+      "end": "(\\\\end\\{\\2\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{(luacode(?:\\*)?)\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.lua",
+      "patterns": [
+        {
+          "include": "source.lua"
+        }
+      ],
+      "end": "(\\\\end\\{\\2\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{((?:pycode|sageblock|sagesilent|sageverbatim|sageexample|sagecommandline)(?:\\*)?)\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ],
+      "end": "(\\\\end\\{\\2\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{(scalacode(?:\\*)?)\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.scala",
+      "patterns": [
+        {
+          "include": "source.scala"
+        }
+      ],
+      "end": "(\\\\end\\{\\2\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{([a-z]*code(?:\\*)?)\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "end": "(\\\\end\\{\\2\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{asy\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.asymptote",
+      "patterns": [
+        {
+          "include": "source.asymptote"
+        }
+      ],
+      "end": "(\\\\end\\{asy\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{dot2tex\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.dot",
+      "patterns": [
+        {
+          "include": "source.dot"
+        }
+      ],
+      "end": "(\\\\end\\{dot2tex\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "((?:\\s*)\\\\begin\\{gnuplot\\}(?:\\[.*\\])?)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#code-env"
+            }
+          ]
+        }
+      },
+      "contentName": "source.gnuplot",
+      "patterns": [
+        {
+          "include": "source.gnuplot"
+        }
+      ],
+      "end": "(\\\\end\\{gnuplot\\}(?:\\s*\\n)?)"
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)((?:fboxv|boxedv|V|v)erbatim)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "contentName": "markup.raw.verbatim.claytext",
+      "end": "((\\\\)end)(\\{)(\\4)(\\})",
+      "name": "meta.function.verbatim.claytext"
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(VerbatimOut)(\\})(\\{)([^\\}]*)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        },
+        "6": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "7": {
+          "name": "support.class.claytext"
+        },
+        "8": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "contentName": "markup.raw.verbatim.claytext",
+      "end": "((\\\\)end)(\\{)(\\VerbatimOut)(\\})",
+      "name": "meta.function.verbatim.claytext"
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(alltt)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "contentName": "markup.raw.verbatim.claytext",
+      "end": "((\\\\)end)(\\{)(alltt)(\\})",
+      "name": "meta.function.alltt.claytext",
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.function.tex"
+            }
+          },
+          "match": "(\\\\)[A-Za-z]+",
+          "name": "support.function.general.tex"
+        }
+      ]
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)((?:C|c)omment)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "contentName": "punctuation.definition.comment.tex",
+      "end": "((\\\\)end)(\\{)(\\4)(\\})",
+      "name": "meta.function.verbatim.claytext"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "support.function.url.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "markup.underline.link.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "match": "(?:\\s*)((\\\\)(?:url|href))(\\{)([^}]*)(\\})",
+      "name": "meta.function.link.url.claytext"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "comment": "These two patterns match the \\begin{document} and \\end{document} commands, so that the environment matching pattern following them will ignore those commands.",
+      "match": "(?:\\s*)((\\\\)begin)(\\{)(document)(\\})",
+      "name": "meta.function.begin-document.claytext"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "match": "(?:\\s*)((\\\\)end)(\\{)(document)(\\})",
+      "name": "meta.function.end-document.claytext"
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)((?:align|equation|(?:IEEE)?eqnarray|multline|aligned|alignat|split|gather|gathered|cases|displaymath|[a-zA-Z]*matrix)(?:\\*)?)(\\})(\\s*\\n)?",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "contentName": "support.class.math.block.environment.claytext",
+      "end": "(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?",
+      "name": "meta.function.environment.math.claytext",
+      "patterns": [
+        {
+          "match": "(?<!\\\\)&",
+          "name": "keyword.control.equation.align.claytext"
+        },
+        {
+          "match": "\\\\\\\\",
+          "name": "keyword.control.equation.newline.claytext"
+        },
+        {
+          "include": "#definition-label"
+        },
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(array|tabular[xy*]?|xltabular)(\\})(\\s*\\n)?",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "contentName": "meta.data.environment.tabular.claytext",
+      "end": "(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?",
+      "name": "meta.function.environment.tabular.claytext",
+      "patterns": [
+        {
+          "match": "(?<!\\\\)&",
+          "name": "keyword.control.table.cell.claytext"
+        },
+        {
+          "match": "\\\\\\\\",
+          "name": "keyword.control.table.newline.claytext"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(itemize|enumerate|description|list)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "end": "((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?",
+      "name": "meta.function.environment.list.claytext",
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(tikzpicture)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "end": "((\\\\)end)(\\{)(tikzpicture)(\\})(?:\\s*\\n)?",
+      "name": "meta.function.environment.claytext.tikz",
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(frame)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "end": "((\\\\)end)(\\{)(frame)(\\})",
+      "name": "meta.function.environment.frame.claytext",
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(mpost[*]?)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "end": "((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?",
+      "name": "meta.function.environment.claytext.mpost"
+    },
+    {
+      "begin": "(?:\\s*)((\\\\)begin)(\\{)(\\w+[*]?)(\\})",
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "end": "((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?",
+      "name": "meta.function.environment.general.claytext",
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "storage.type.function.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.begin.claytext"
+        },
+        "4": {
+          "name": "support.function.general.tex"
+        },
+        "5": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "6": {
+          "name": "punctuation.definition.end.claytext"
+        }
+      },
+      "match": "((\\\\)(?:newcommand|renewcommand|(?:re)?newrobustcmd|DeclareRobustCommand))\\*?({)((\\\\)[^}]*)(})"
+    },
+    {
+      "begin": "((\\\\)marginpar)((?:\\[[^\\[]*?\\])*)(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "support.function.marginpar.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#optional-arg"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.marginpar.begin.claytext"
+        }
+      },
+      "contentName": "meta.paragraph.margin.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.marginpar.end.claytext"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.tex#braces"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)footnote)((?:\\[[^\\[]*?\\])*)(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "support.function.footnote.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#optional-arg"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.footnote.begin.claytext"
+        }
+      },
+      "contentName": "entity.name.footnote.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.footnote.end.claytext"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.tex#braces"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)emph)(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "support.function.emph.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.emph.begin.claytext"
+        }
+      },
+      "contentName": "markup.italic.emph.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.emph.end.claytext"
+        }
+      },
+      "name": "meta.function.emph.claytext",
+      "patterns": [
+        {
+          "include": "text.tex#braces"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)textit)(\\{)",
+      "captures": {
+        "1": {
+          "name": "support.function.textit.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.textit.begin.claytext"
+        }
+      },
+      "comment": "We put the keyword in a capture and name this capture, so that disabling spell checking for “keyword” won't be inherited by the argument to \\textit{...}.\n\nPut specific matches for particular claytext keyword.functions before the last two more general functions",
+      "contentName": "markup.italic.textit.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.textit.end.claytext"
+        }
+      },
+      "name": "meta.function.textit.claytext",
+      "patterns": [
+        {
+          "include": "text.tex#braces"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)textbf)(\\{)",
+      "captures": {
+        "1": {
+          "name": "support.function.textbf.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.textbf.begin.claytext"
+        }
+      },
+      "contentName": "markup.bold.textbf.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.textbf.end.claytext"
+        }
+      },
+      "name": "meta.function.textbf.claytext",
+      "patterns": [
+        {
+          "include": "text.tex#braces"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)texttt)(\\{)",
+      "captures": {
+        "1": {
+          "name": "support.function.texttt.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.texttt.begin.claytext"
+        }
+      },
+      "contentName": "markup.raw.texttt.claytext",
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.texttt.end.claytext"
+        }
+      },
+      "name": "meta.function.texttt.claytext",
+      "patterns": [
+        {
+          "include": "text.tex#braces"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "captures": {
+        "0": {
+          "name": "keyword.other.item.claytext"
+        },
+        "1": {
+          "name": "punctuation.definition.keyword.claytext"
+        }
+      },
+      "match": "(\\\\)item\\b",
+      "name": "meta.scope.item.claytext"
+    },
+    {
+      "begin": "((\\\\)(?:auto|foot|full|no|short|text|paren)?[cC]ite(?:al)?(?:p|s|t|author|year(?:par)?|title)?[ANP]*\\*?)((?:(?:\\[[^\\]]*\\]){0,2}\\{[\\w:.]+\\})*)(?:(\\[)[^\\]]*(\\]))?(?:(\\[)[^\\]]*(\\]))?(\\{)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.cite.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword.claytext"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#autocites-arg"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.arguments.optional.begin.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.optional.end.claytext"
+        },
+        "6": {
+          "name": "punctuation.definition.arguments.optional.begin.claytext"
+        },
+        "7": {
+          "name": "punctuation.definition.arguments.optional.end.claytext"
+        },
+        "8": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "name": "meta.citation.claytext",
+      "patterns": [
+        {
+          "match": "[\\w:.]+",
+          "name": "constant.other.reference.citation.claytext"
+        }
+      ]
+    },
+    {
+      "begin": "((\\\\)(?:\\w*[r|R]ef\\*?))(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.ref.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "name": "meta.reference.label.claytext",
+      "patterns": [
+        {
+          "match": "[a-zA-Z0-9\\.,:/*!^_-]",
+          "name": "constant.other.reference.label.claytext"
+        }
+      ]
+    },
+    {
+      "include": "#definition-label"
+    },
+    {
+      "begin": "((\\\\)verb[\\*]?)\\s*((\\\\)scantokens)(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "support.function.verb.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "support.function.verb.claytext"
+        },
+        "4": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.begin.claytext"
+        }
+      },
+      "contentName": "markup.raw.verb.claytext",
+      "end": "(\\})",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.end.claytext"
+        }
+      },
+      "name": "meta.function.verb.claytext",
+      "patterns": [
+        {
+          "include": "$self"
+        }
+      ]
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "support.function.verb.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "4": {
+          "name": "markup.raw.verb.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.verb.claytext"
+        }
+      },
+      "match": "((\\\\)verb[\\*]?)\\s*((?<=\\s)\\S|[^a-zA-Z])(.*?)(\\3|$)",
+      "name": "meta.function.verb.claytext"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "support.function.verb.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#optional-arg"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        },
+        "6": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "7": {
+          "name": "markup.raw.verb.claytext"
+        },
+        "8": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "9": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "10": {
+          "name": "markup.raw.verb.claytext"
+        },
+        "11": {
+          "name": "punctuation.definition.verb.claytext"
+        }
+      },
+      "match": "((\\\\)(?:mint|mintinline))((?:\\[[^\\[]*?\\])?)(\\{)[a-zA-Z]*(\\})(?:(?:([^a-zA-Z\\{])(.*?)(\\6))|(?:(\\{)(.*?)(\\})))",
+      "name": "meta.function.verb.claytext"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "support.function.verb.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#optional-arg"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "5": {
+          "name": "markup.raw.verb.claytext"
+        },
+        "6": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "7": {
+          "name": "punctuation.definition.verb.claytext"
+        },
+        "8": {
+          "name": "markup.raw.verb.claytext"
+        },
+        "9": {
+          "name": "punctuation.definition.verb.claytext"
+        }
+      },
+      "match": "((\\\\)[a-z]+inline)((?:\\[[^\\[]*?\\])?)(?:(?:([^a-zA-Z\\{])(.*?)(\\4))|(?:(\\{)(.*?)(\\})))",
+      "name": "meta.function.verb.claytext"
+    },
+    {
+      "match": "\\\\(?:newline|pagebreak|clearpage|linebreak|pause)(?:\\b)",
+      "name": "keyword.control.layout.tex"
+    },
+    {
+      "begin": "\\\\\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.claytext"
+        }
+      },
+      "end": "\\\\\\)",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.claytext"
+        }
+      },
+      "name": "support.class.math.claytext",
+      "patterns": [
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "\\$\\$",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.claytext"
+        }
+      },
+      "end": "\\$\\$",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.claytext"
+        }
+      },
+      "name": "support.class.math.claytext",
+      "patterns": [
+        {
+          "match": "\\\\\\$",
+          "name": "constant.character.escape.tex"
+        },
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "\\\\\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.claytext"
+        }
+      },
+      "end": "\\\\\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.claytext"
+        }
+      },
+      "name": "support.class.math.claytext",
+      "patterns": [
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.constant.claytext"
+        }
+      },
+      "match": "(\\\\)(text(s(terling|ixoldstyle|urd|e(ction|venoldstyle|rvicemark))|yen|n(ineoldstyle|umero|aira)|c(ircledP|o(py(left|right)|lonmonetary)|urrency|e(nt(oldstyle)?|lsius))|t(hree(superior|oldstyle|quarters(emdash)?)|i(ldelow|mes)|w(o(superior|oldstyle)|elveudash)|rademark)|interrobang(down)?|zerooldstyle|o(hm|ne(superior|half|oldstyle|quarter)|penbullet|rd(feminine|masculine))|d(i(scount|ed|v(orced)?)|o(ng|wnarrow|llar(oldstyle)?)|egree|agger(dbl)?|blhyphen(char)?)|uparrow|p(ilcrow|e(so|r(t(housand|enthousand)|iodcentered))|aragraph|m)|e(stimated|ightoldstyle|uro)|quotes(traight(dblbase|base)|ingle)|f(iveoldstyle|ouroldstyle|lorin|ractionsolidus)|won|l(not|ira|e(ftarrow|af)|quill|angle|brackdbl)|a(s(cii(caron|dieresis|acute|grave|macron|breve)|teriskcentered)|cutedbl)|r(ightarrow|e(cipe|ferencemark|gistered)|quill|angle|brackdbl)|g(uarani|ravedbl)|m(ho|inus|u(sicalnote)?|arried)|b(igcircle|orn|ullet|lank|a(ht|rdbl)|rokenbar)))\\b",
+      "name": "constant.character.claytext"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.column-specials.begin.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.column-specials.end.claytext"
+        }
+      },
+      "match": "(?:<|>)(\\{)\\$(\\})",
+      "name": "meta.column-specials.claytext"
+    },
+    {
+      "include": "text.tex"
+    }
+  ],
+  "repository": {
+    "optional-arg": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.optional.arguments.begin.claytext"
+            },
+            "2": {
+              "name": "variable.parameter.claytext"
+            },
+            "3": {
+              "name": "punctuation.definition.optional.arguments.end.claytext"
+            }
+          },
+          "match": "(\\[)([^\\[]*?)(\\])"
+        }
+      ]
+    },
+    "autocites-arg": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.arguments.optional.begin.claytext"
+            },
+            "2": {
+              "name": "punctuation.definition.arguments.optional.end.claytext"
+            },
+            "3": {
+              "name": "punctuation.definition.arguments.optional.begin.claytext"
+            },
+            "4": {
+              "name": "punctuation.definition.arguments.optional.end.claytext"
+            },
+            "5": {
+              "name": "punctuation.definition.arguments.begin.claytext"
+            },
+            "6": {
+              "name": "constant.other.reference.citation.claytext"
+            },
+            "7": {
+              "name": "punctuation.definition.arguments.end.claytext"
+            },
+            "8": {
+              "patterns": [
+                {
+                  "include": "#autocites-arg"
+                }
+              ]
+            }
+          },
+          "match": "(?:(\\[)[^\\]]*(\\]))?(?:(\\[)[^\\]]*(\\]))?(\\{)([\\w:.]+)(\\})(.*)"
+        }
+      ]
+    },
+    "minted-env": {
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        },
+        "6": {
+          "name": "punctuation.definition.arguments.optional.begin.claytext"
+        },
+        "7": {
+          "name": "punctuation.definition.arguments.optional.end.claytext"
+        },
+        "8": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "9": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "10": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "match": "((\\\\)(?:begin|end))(\\{)(lstlisting|minted|pyglist)(\\})(?:(\\[).*(\\]))?(?:(\\{)([a-z]*)(\\}))?"
+    },
+    "code-env": {
+      "captures": {
+        "1": {
+          "name": "support.function.be.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.function.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        },
+        "4": {
+          "name": "variable.parameter.function.claytext"
+        },
+        "5": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        },
+        "6": {
+          "name": "punctuation.definition.arguments.optional.begin.claytext"
+        },
+        "7": {
+          "name": "punctuation.definition.arguments.optional.end.claytext"
+        }
+      },
+      "match": "(?:\\s*)((\\\\)(?:begin|end))(\\{)([a-z]*code(?:\\*)?|gnuplot|dot2tex|asy|sage[a-z]*)(\\})(?:(\\[).*(\\]))?"
+    },
+    "definition-label": {
+      "begin": "((\\\\)label)(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.label.claytext"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword.claytext"
+        },
+        "3": {
+          "name": "punctuation.definition.arguments.begin.claytext"
+        }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.arguments.end.claytext"
+        }
+      },
+      "name": "meta.definition.label.claytext",
+      "patterns": [
+        {
+          "match": "[a-zA-Z0-9\\.,:/*!^_-]",
+          "name": "variable.parameter.definition.label.claytext"
+        }
+      ]
+    }
+  },
+  "scopeName": "text.tex.claytext",
+  "uuid": "3BEEA00C-6B1D-11D9-B8AD-000D93589AF6"
+}
