@@ -1,5 +1,12 @@
 {
   "name": "vsclay",
+  "author": "Ramkumar Ramachandra",
+  "publisher": "artagnon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artagnon/vsclay"
+  },
+  "license": "CC0",
   "displayName": "vsclay",
   "description": "Syntax definition for claytext (gh:artagnon/clayoven)",
   "version": "0.0.1",
@@ -9,10 +16,6 @@
   "categories": [
     "Programming Languages"
   ],
-  "activationEvents": [
-    "onCommand:extension.claytext"
-  ],
-  "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
@@ -20,24 +23,24 @@
         "extensions": [
           ".clay"
         ],
-        "configuration": "./syntax/claytext.json"
+        "configuration": "./syntax/syntax.json"
       }
     ],
     "grammars": [
       {
         "language": "claytext",
         "scopeName": "text.claytext",
-        "path": "./syntax/claytext.tmLanguage.json"
+        "path": "./syntax/claytext.tmLanguage.json",
+        "embeddedLanguages": {
+          "language.name.latex.claytext": "latex"
+        }
       }
     ]
   },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
-  },
+  "extensionDependencies": [
+    "james-yu.latex-workshop",
+    "gruntfuggly.triggertaskonsave"
+  ],
   "devDependencies": {
     "typescript": "^3.3.1",
     "vscode": "^1.1.28",

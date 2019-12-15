@@ -5,14 +5,13 @@
   "brackets": [
     ["{", "}"],
     ["[", "]"],
-    ["(", ")"],
-    ["\\left", "\\right"]
+    ["(", ")"]
   ],
   "autoClosingPairs": [
     ["{", "}"],
     ["[", "]"],
     ["(", ")"],
-    ["`", "'"]
+    ["`", "`"]
   ],
   "surroundingPairs": [
     ["{", "}"],
@@ -20,19 +19,11 @@
     ["(", ")"],
     ["\"", "\""],
     ["'", "'"],
-    ["`", "'"],
+    ["`", "`"],
     ["$", "$"]
   ],
   "indentationRules": {
-    "increaseIndentPattern": "(\\\\begin{(?!document)|[[|<<)",
-    "decreaseIndentPattern": "(\\\\end{(?!document)|]]|>>)"
-  },
-  "folding": {
-    "markers": {
-      "start": "^\\s*%\\s*#?region\\b.*",
-      "end": "^\\s*%\\s*#?endregion\\b.*"
-    }
-  },
-  "autoCloseBefore": ";:.,=}])>\\` \n\t$",
-  "wordPattern": "(__)|(\\*\\*)|(@.)|(\\.\\.\\.)|([^\\s`'\"~_!?|$#@%^&*\\-=+;:,.<>(){}[\\]\\\\\\/]{2,})"
+    "increaseIndentPattern": "([[|<<)",
+    "decreaseIndentPattern": "(]]|>>)"
+  }
 }
