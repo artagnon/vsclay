@@ -4,16 +4,22 @@
     {
       "begin": "\\[\\[",
       "end": "\\]\\]",
+      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
       "contentName": "markup.quote.claytext"
     },
     {
       "begin": "<<",
       "end": ">>",
+      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
       "contentName": "markup.bold.claytext"
     },
     {
       "begin": "\\$\\$",
       "end": "\\$\\$",
+      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
       "contentName": "meta.embedded.latex"
     },
     {
@@ -23,40 +29,24 @@
     {
       "match": "(\\[)([^\\]]+)(\\])\\([^\\)]+\\)",
       "captures": {
-        "1": {
-          "name": "keyword.operator.claytext"
-        },
-        "2": {
-          "name": "markup.italic.claytext"
-        },
-        "3": {
-          "name": "keyword.operator.claytext"
-        }
+        "1": { "name": "keyword.operator.claytext" },
+        "2": { "name": "markup.italic.claytext" },
+        "3": { "name": "keyword.operator.claytext" }
       }
     },
     {
       "match": "(`)([^`]+)(`)",
       "captures": {
-        "1": {
-          "name": "keyword.operator.claytext"
-        },
-        "2": {
-          "name": "markup.quote.claytext"
-        },
-        "3": {
-          "name": "keyword.operator.claytext"
-        }
+        "1": { "name": "keyword.operator.claytext" },
+        "2": { "name": "markup.quote.claytext" },
+        "3": { "name": "keyword.operator.claytext" }
       }
     },
     {
       "match": "^(#) (.+)$",
       "captures": {
-        "1": {
-          "name": "keyword.operator.claytext"
-        },
-        "2": {
-          "name": "markup.heading.2.claytext"
-        }
+        "1": { "name": "keyword.operator.claytext" },
+        "2": { "name": "markup.heading.2.claytext" }
       }
     },
     {
