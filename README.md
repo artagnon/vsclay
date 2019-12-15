@@ -1,3 +1,5 @@
 # vsclay
 
-A vscode extension for [claytext](https://github.com/artagnon/clayoven).
+A vscode extension to syntax-highlight [claytext](https://github.com/artagnon/clayoven).
+
+![vsclay demo](vsclay-demo.png)

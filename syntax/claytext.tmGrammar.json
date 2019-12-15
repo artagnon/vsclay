@@ -60,6 +60,14 @@
     {
       "match": "^\\[\\^\\d+\\]:",
       "name": "keyword.other.claytext"
+    },
+    {
+      "match": "^\\([ivx]+\\) ",
+      "name": "keyword.other.claytext"
+    },
+    {
+      "match": "^\\d+\\. ",
+      "name": "keyword.other.claytext"
     }
   ]
 }
