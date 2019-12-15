@@ -1,0 +1,5 @@
+{
+  "scopeName": "latex.injection",
+  "injectionSelector": "L:meta.embedded.latex",
+  "patterns": [{ "include": "source.latex" }]
+}

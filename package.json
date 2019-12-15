@@ -30,9 +30,13 @@
       {
         "language": "claytext",
         "scopeName": "text.claytext",
-        "path": "./syntax/claytext.tmGrammar.json",
+        "path": "./syntax/claytext.tmGrammar.json"
+      },
+      {
+        "scopeName": "latex.injection",
+        "path": "./syntax/latexInjection.tmGrammar.json",
         "injectTo": [
-          "text.tex.latex"
+          "text.claytext"
         ],
         "embeddedLanguages": {
           "meta.embedded.latex": "latex"
