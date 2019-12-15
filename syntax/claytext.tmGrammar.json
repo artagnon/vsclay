@@ -23,8 +23,12 @@
       "contentName": "meta.embedded.latex"
     },
     {
-      "match": "\\$[^\\$+]\\$",
-      "name": "meta.embedded.latex"
+      "match": "(\\$)[^\\$+](\\$)",
+      "name": "meta.embedded.latex",
+      "captures": {
+        "0": { "name": "keyword.operator.claytext" },
+        "1": { "name": "keyword.operator.claytext" }
+      }
     },
     {
       "match": "(\\[)([^\\]]+)(\\])\\([^\\)]+\\)",

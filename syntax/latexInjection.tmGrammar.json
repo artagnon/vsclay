@@ -1,5 +1,5 @@
 {
   "scopeName": "latex.injection",
-  "injectionSelector": "L:meta.embedded.latex",
-  "patterns": [{ "include": "source.latex" }]
+  "injectionSelector": "R:meta.embedded.latex",
+  "patterns": [{ "include": "text.tex.latex" }]
 }
