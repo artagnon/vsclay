@@ -4,14 +4,18 @@
   "name": "claytext",
   "patterns": [
     {
-      "begin": "^[[$",
-      "end": "^]]$",
-      "contentName": "codeblock.claytext"
+      "begin": "[[",
+      "end": "]]",
+      "contentName": "markup.raw.verbatim.claytext"
     },
     {
-      "begin": "^<<$",
-      "end": "^>>$",
-      "contentName": "images.claytext"
+      "begin": "# (.*)",
+      "contentName": "markup.heading.2.claytext"
+    },
+    {
+      "begin": "<<",
+      "end": ">>",
+      "contentName": "markup.raw.claytext"
     },
     {
       "comment": "This scope identifies partially typed commands such as `\\tab`. We use this to trigger “Command Completion” only when it makes sense.",
