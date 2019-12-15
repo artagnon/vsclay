@@ -1,23 +1,20 @@
 {
-  "scopeName:": "text.claytext",
-  "fileTypes": ["clay"],
-  "keyEquivalent": "^~C",
-  "name": "claytext",
+  "scopeName": "text.claytext",
   "patterns": [
     {
-      "begin": "^\\[\\[$",
-      "end": "^\\]\\]$",
+      "begin": "\\[\\[",
+      "end": "\\]\\]",
       "contentName": "markup.raw.verbatim.claytext"
     },
     {
-      "begin": "^<<$",
-      "end": "^>>$",
-      "contentName": "markup.raw.claytext"
+      "begin": "<<",
+      "end": ">>",
+      "contentName": "markup.bold.claytext"
     },
     {
-      "begin": "^\\$\\$",
-      "end": "^\\$\\$",
-      "contentName": "language.name.latex.claytext"
+      "begin": "\\$\\$",
+      "end": "\\$\\$",
+      "contentName": "meta.embedded.block.latex"
     },
     {
       "match": "^(#) (.*)$",

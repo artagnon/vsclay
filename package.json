@@ -30,9 +30,9 @@
       {
         "language": "claytext",
         "scopeName": "text.claytext",
-        "path": "./syntax/claytext.tmLanguage.json",
+        "path": "./syntax/claytext.tmGrammar.json",
         "embeddedLanguages": {
-          "language.name.latex.claytext": "latex"
+          "meta.embedded.block.latex": "latex"
         }
       }
     ]
