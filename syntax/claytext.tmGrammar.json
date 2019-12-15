@@ -68,6 +68,10 @@
     {
       "match": "^\\d+\\. ",
       "name": "keyword.other.claytext"
+    },
+    {
+      "match": "^--$",
+      "name": "keyword.other.claytext"
     }
   ]
 }
