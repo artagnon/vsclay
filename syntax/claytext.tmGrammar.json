@@ -6,14 +6,14 @@
       "end": "\\]\\]",
       "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
       "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "contentName": "markup.quote.claytext"
+      "contentName": "markup.raw.claytext"
     },
     {
       "begin": "<<",
       "end": ">>",
       "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
       "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "contentName": "markup.bold.claytext"
+      "contentName": "markup.underline.link.claytext"
     },
     {
       "begin": "\\$\\$",
@@ -31,14 +31,6 @@
       }
     },
     {
-      "match": "(\\[)([^\\]]+)(\\])\\([^\\)]+\\)",
-      "captures": {
-        "1": { "name": "keyword.operator.claytext" },
-        "2": { "name": "markup.italic.claytext" },
-        "3": { "name": "keyword.operator.claytext" }
-      }
-    },
-    {
       "match": "(`)([^`]+)(`)",
       "captures": {
         "1": { "name": "keyword.operator.claytext" },
@@ -49,29 +41,38 @@
     {
       "match": "^(#) (.+)$",
       "captures": {
-        "1": { "name": "keyword.operator.claytext" },
-        "2": { "name": "markup.heading.2.claytext" }
+        "1": { "name": "keyword.control.claytext" },
+        "2": { "name": "entity.name.section.claytext" }
       }
     },
     {
       "match": "^\\(.+\\)$",
-      "name": "markup.italic.claytext"
+      "name": "markup.heading.3.claytext"
     },
     {
-      "match": "^\\[\\^\\d+\\]:",
-      "name": "keyword.other.claytext"
+      "match": "^(\\[\\^\\d+\\]:) (.+)$",
+      "captures": {
+        "1": { "name": "keyword.operator.claytext" },
+        "2": { "name": "markup.other.claytext" }
+      }
     },
     {
-      "match": "^\\([ivx]+\\) ",
-      "name": "keyword.other.claytext"
+      "match": "^(-) (.+)$",
+      "captures": {
+        "1": { "name": "keyword.control.claytext" },
+        "2": { "name": "markup.unnumbered.claytext" }
+      }
     },
     {
-      "match": "^\\d+\\. ",
-      "name": "keyword.other.claytext"
+      "match": "^(\\([ivx]+\\)|\\d+\\.|\\([a-z]\\)) (.+)$",
+      "captures": {
+        "1": { "name": "keyword.control.claytext" },
+        "2": { "name": "markup.numbered.claytext" }
+      }
     },
     {
       "match": "^--$",
-      "name": "keyword.other.claytext"
+      "name": "keyword.control.claytext"
     }
   ]
 }
