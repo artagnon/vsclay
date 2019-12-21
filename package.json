@@ -1,7 +1,11 @@
 {
   "name": "vsclay",
   "icon": "assets/clayoven.png",
-  "author": "Ramkumar Ramachandra",
+  "author": {
+    "name": "Ramkumar Ramachandra",
+    "email": "artagnon@gmail.com",
+    "url": "https://artagnon.com"
+  },
   "publisher": "artagnon",
   "repository": {
     "type": "git",
@@ -53,7 +57,6 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.21",
     "@types/vscode": "1.41.0",
-    "prettier": "^1.19.1",
     "tslint": "^5.20.1",
     "typescript": "^3.7.4",
     "vscode": "^1.1.36"
