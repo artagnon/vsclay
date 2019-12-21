@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/artagnon/vsclay"
   },
-  "license": "CC0",
+  "license": "CC0-1.0",
   "displayName": "vsclay",
   "description": "Syntax definition for claytext (gh:artagnon/clayoven)",
   "version": "0.0.2",
@@ -23,7 +23,7 @@
         "extensions": [
           ".clay"
         ],
-        "configuration": "./syntax/syntax.json"
+        "configuration": "claytext.configuration.json"
       }
     ],
     "grammars": [
@@ -49,10 +49,10 @@
     "gruntfuggly.triggertaskonsave"
   ],
   "devDependencies": {
-    "typescript": "^3.3.1",
-    "vscode": "^1.1.28",
-    "tslint": "^5.12.1",
-    "@types/node": "^10.12.21",
-    "@types/mocha": "^2.2.42"
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.21",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4",
+    "vscode": "^1.1.36"
   }
 }
