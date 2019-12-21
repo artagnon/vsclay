@@ -14,7 +14,7 @@
   "license": "CC0-1.0",
   "displayName": "vsclay",
   "description": "Syntax definition for claytext (gh:artagnon/clayoven)",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.41.0"
   },
