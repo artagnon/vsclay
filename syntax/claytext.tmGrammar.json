@@ -23,7 +23,7 @@
       "contentName": "meta.embedded.latex"
     },
     {
-      "match": "(\\$)[^\\$+](\\$)",
+      "match": "(\\$)[^$]+(\\$)",
       "name": "meta.embedded.latex",
       "captures": {
         "0": { "name": "keyword.operator.claytext" },
