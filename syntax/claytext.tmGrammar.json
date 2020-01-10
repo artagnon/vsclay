@@ -16,34 +16,32 @@
       "contentName": "markup.underline.link.claytext"
     },
     {
-      "begin": "\\$\\$",
-      "end": "\\$\\$",
+      "begin": "^((\\$\\$)|(\\{\\{))$",
+      "end": "^((\\$\\$)|(\\}\\}))$",
       "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
       "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
       "contentName": "meta.embedded.latex"
     },
     {
-      "match": "(\\$)[^$]+(\\$)",
-      "name": "meta.embedded.latex",
-      "captures": {
-        "0": { "name": "keyword.operator.claytext" },
-        "1": { "name": "keyword.operator.claytext" }
-      }
+      "begin": "\\$",
+      "end": "\\$",
+      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "contentName": "meta.embedded.latex"
     },
     {
-      "match": "(`)([^`]+)(`)",
-      "captures": {
-        "1": { "name": "keyword.operator.claytext" },
-        "2": { "name": "markup.quote.claytext" },
-        "3": { "name": "keyword.operator.claytext" }
-      }
+      "begin": "`",
+      "end": "`",
+      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "contentName": "keyword.operaor.claytext"
     },
     {
       "match": "^\\(.+\\)$",
       "name": "markup.heading.3.claytext"
     },
     {
-      "match": "^((#)|(\\([ivx]+\\)|\\d+\\.|\\([a-z]\\))|(\\[\\^\\d+\\]:)|(-)) ",
+      "match": "^(#|(\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\[\\^\\d+\\]:)|(\\-)) ",
       "name": "keyword.control.claytext"
     },
     {
