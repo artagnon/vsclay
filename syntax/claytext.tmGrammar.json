@@ -4,37 +4,37 @@
     {
       "begin": "\\[\\[",
       "end": "\\]\\]",
-      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "markup.raw.claytext"
     },
     {
       "begin": "<<",
       "end": ">>",
-      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "markup.underline.link.claytext"
     },
     {
       "begin": "^((\\$\\$)|(\\{\\{))$",
       "end": "^((\\$\\$)|(\\}\\}))$",
-      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "meta.embedded.latex"
     },
     {
       "begin": "\\$",
       "end": "\\$",
-      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "meta.embedded.latex"
     },
     {
       "begin": "`",
       "end": "`",
-      "beginCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "endCaptures": { "0": { "name": "keyword.operator.claytext" } },
-      "contentName": "keyword.operaor.claytext"
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "contentName": "markup.quote.claytext"
     },
     {
       "match": "^\\(.+\\)$",
