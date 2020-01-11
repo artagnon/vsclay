@@ -41,8 +41,15 @@
       "name": "markup.heading.3.claytext"
     },
     {
-      "match": "^(#|(\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\[\\^\\d+\\]:)|(\\-)) ",
+      "match": "^((\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\[\\^\\d+\\]:)|(\\-)) ",
       "name": "keyword.control.claytext"
+    },
+    {
+      "match": "^(#) (.+)$",
+      "captures": {
+        "1": { "name": "keyword.control.claytext" },
+        "2": { "name": "markup.heading.2.claytext" }
+      }
     },
     {
       "match": "^--$",
