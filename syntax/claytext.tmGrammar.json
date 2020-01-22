@@ -16,6 +16,20 @@
       "contentName": "markup.underline.link.claytext"
     },
     {
+      "begin": "\\+\\+",
+      "end": "\\+\\+",
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "contentName": "markup.heading.4.claytext"
+    },
+    {
+      "begin": "^\\.\\.\\.$",
+      "end": "^\\.\\.\\.$",
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "contentName": "markup.italic.claytext"
+    },
+    {
       "begin": "^((\\$\\$)|(\\{\\{))$",
       "end": "^((\\$\\$)|(\\}\\}))$",
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
@@ -37,11 +51,7 @@
       "contentName": "markup.quote.claytext"
     },
     {
-      "match": "^\\(.+\\)$",
-      "name": "markup.heading.3.claytext"
-    },
-    {
-      "match": "^((\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\[\\^\\d+\\]:)|(\\-)) ",
+      "match": "^((\\+)|(\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\[\\^\\d+\\]:)|(\\-)) ",
       "name": "keyword.control.claytext"
     },
     {
