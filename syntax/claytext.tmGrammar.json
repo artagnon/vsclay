@@ -2,8 +2,8 @@
   "scopeName": "text.claytext",
   "patterns": [
     {
-      "begin": "(\\[\\[|~~)",
-      "end": "(\\]\\]|~~)",
+      "begin": "\\[\\[",
+      "end": "\\]\\]",
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
       "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "markup.raw.claytext"
@@ -42,6 +42,13 @@
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
       "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "meta.embedded.latex"
+    },
+    {
+      "begin": "^~~$",
+      "end": "^~~$",
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "contentName": "meta.embedded.coq"
     },
     {
       "begin": "`",

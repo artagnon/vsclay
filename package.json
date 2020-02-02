@@ -46,6 +46,16 @@
         "embeddedLanguages": {
           "meta.embedded.latex": "latex"
         }
+      },
+      {
+        "scopeName": "coq.injection",
+        "path": "./syntax/coqInjection.tmGrammar.json",
+        "injectTo": [
+          "text.claytext"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.coq": "coq"
+        }
       }
     ]
   },

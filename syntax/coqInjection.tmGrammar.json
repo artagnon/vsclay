@@ -1,0 +1,5 @@
+{
+  "scopeName": "coq.injection",
+  "injectionSelector": "R:meta.embedded.coq",
+  "patterns": [{ "include": "source.coq" }]
+}
