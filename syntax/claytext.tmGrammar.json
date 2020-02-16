@@ -58,7 +58,7 @@
       "contentName": "markup.quote.claytext"
     },
     {
-      "match": "^((\\+)|(\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\[\\^\\d+\\]:)|(\\-)) ",
+      "match": "^((\\+)|(\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\*|†|‡|§|||¶)|(\\-)) ",
       "name": "keyword.control.claytext"
     },
     {
