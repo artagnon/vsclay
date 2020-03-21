@@ -64,11 +64,11 @@
     "gruntfuggly.triggertaskonsave"
   ],
   "devDependencies": {
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.12.21",
-    "@types/vscode": "1.41.0",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.4",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.9.2",
+    "@types/vscode": "1.43.0",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3",
     "vscode": "^1.1.36"
   }
 }
