@@ -31,6 +31,12 @@
         "configuration": "claytext.configuration.json"
       }
     ],
+    "snippets": [
+      {
+        "language": "claytext",
+        "path": "./snippets/latex.json"
+      }
+    ],
     "grammars": [
       {
         "language": "claytext",
