@@ -2,11 +2,32 @@
   "scopeName": "text.claytext",
   "patterns": [
     {
-      "begin": "^\\[\\[$",
-      "end": "^\\]\\]$",
+      "begin": "^~~$",
+      "end": "^~~$",
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
       "endCaptures": { "0": { "name": "keyword.control.claytext" } },
-      "contentName": "markup.raw.claytext"
+      "contentName": "meta.embedded.coq"
+    },
+    {
+      "begin": "^```cpp$",
+      "end": "^```$",
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "contentName": "meta.embedded.cpp"
+    },
+    {
+      "begin": "^```rs$",
+      "end": "^```$",
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "contentName": "meta.embedded.rs"
+    },
+    {
+      "begin": "^```hs$",
+      "end": "^```$",
+      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
+      "contentName": "meta.embedded.hs"
     },
     {
       "begin": "^<<$",
@@ -23,8 +44,8 @@
       "contentName": "markup.italic.claytext"
     },
     {
-      "begin": "^((\\$\\$)|(\\{\\{))$",
-      "end": "^((\\$\\$)|(\\}\\}))$",
+      "begin": "^(\\$\\$)|(\\{\\{)$",
+      "end": "^(\\$\\$)|(\\}\\})$",
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
       "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "meta.embedded.latex"
@@ -35,13 +56,6 @@
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
       "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "meta.embedded.latex"
-    },
-    {
-      "begin": "^~~$",
-      "end": "^~~$",
-      "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
-      "endCaptures": { "0": { "name": "keyword.control.claytext" } },
-      "contentName": "meta.embedded.coq"
     },
     {
       "begin": "`",

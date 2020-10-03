@@ -1,0 +1,5 @@
+{
+  "scopeName": "hs.injection",
+  "injectionSelector": "R:meta.embedded.hs",
+  "patterns": [{ "include": "source.haskell" }]
+}

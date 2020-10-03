@@ -1,0 +1,5 @@
+{
+  "scopeName": "cpp.injection",
+  "injectionSelector": "R:meta.embedded.cpp",
+  "patterns": [{ "include": "source.cpp" }]
+}

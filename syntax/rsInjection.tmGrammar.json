@@ -1,0 +1,5 @@
+{
+  "scopeName": "rs.injection",
+  "injectionSelector": "R:meta.embedded.rs",
+  "patterns": [{ "include": "source.rust" }]
+}
