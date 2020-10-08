@@ -76,6 +76,20 @@
       }
     },
     {
+      "match": "^(##) (.+)$",
+      "captures": {
+        "1": { "name": "keyword.control.claytext" },
+        "2": { "name": "markup.heading.3.claytext" }
+      }
+    },
+    {
+      "match": "^(###) (.+)$",
+      "captures": {
+        "1": { "name": "keyword.control.claytext" },
+        "2": { "name": "markup.heading.4.claytext" }
+      }
+    },
+    {
       "match": "^(--|\\.\\.)$",
       "name": "keyword.control.claytext"
     }
