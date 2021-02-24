@@ -1,7 +1,8 @@
 # vsclay
 
-[![](https://vsmarketplacebadge.apphb.com/version/artagnon.vsclay.svg)](https://marketplace.visualstudio.com/items?itemName=artagnon.vsclay)
+[![](https://img.shields.io/visual-studio-marketplace/v/artagnon.vsclay)](https://marketplace.visualstudio.com/items?itemName=artagnon.vsclay)
+[![](https://img.shields.io/visual-studio-marketplace/d/artagnon.vsclay)](https://marketplace.visualstudio.com/items?itemName=artagnon.vsclay)
 
-A vscode extension to syntax-highlight [claytext](https://github.com/artagnon/clayoven). Uses injection-grammars to syntax-highlight embedded LaTeX and Coq.
+A vscode extension to syntax-highlight [claytext](https://github.com/artagnon/clayoven). Uses injection-grammars to syntax-highlight embedded LaTeX, Coq, Haskell, C++.
 
 ![vsclay demo](assets/vsclay-demo.png)
