@@ -2,8 +2,8 @@
   "scopeName": "text.claytext",
   "patterns": [
     {
-      "begin": "^```coq$",
-      "end": "^```$",
+      "begin": "^(```coq)$",
+      "end": "^(```)$",
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
       "endCaptures": { "0": { "name": "keyword.control.claytext" } },
       "contentName": "meta.embedded.coq"
