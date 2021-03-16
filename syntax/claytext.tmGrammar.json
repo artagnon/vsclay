@@ -30,7 +30,7 @@
       "contentName": "meta.embedded.hs"
     },
     {
-      "begin": "^<<$",
+      "begin": "^<< (\\d+)x(\\d+)$",
       "end": "^>>$",
       "beginCaptures": { "0": { "name": "keyword.control.claytext" } },
       "endCaptures": { "0": { "name": "keyword.control.claytext" } },
