@@ -1,0 +1,25 @@
+{
+  "brackets": [
+    ["$$", "$$"],
+    ["{{", "}}"],
+    ["[[", "]]"],
+    ["<<", ">>"]
+  ],
+  "autoClosingPairs": [
+    { "open": "`", "close": "`" },
+    { "open": "$$", "close": "$$" },
+    { "open": "{{", "close": "}}" },
+    { "open": "[[", "close": "]]" },
+    { "open": "<<", "close": ">>" }
+  ],
+  "autoSurroundingPairs": [
+    ["$$", "$$"],
+    ["{{", "}}"],
+    ["[[", "]]"],
+    ["<<", ">>"]
+  ],
+  "indentationRules": {
+    "increaseIndentPattern": "^([[|{{)$",
+    "decreaseIndentPattern": "^(]]|}})$"
+  }
+}

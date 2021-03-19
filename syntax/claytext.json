@@ -65,6 +65,13 @@
       "contentName": "markup.quote.claytext"
     },
     {
+      "match": "\\[(.[^\\]]+)\\]\\((.[^\\)]+)\\)",
+      "captures": {
+        "1": { "name": "markup.raw" },
+        "2": { "name": "markup.underline.link.text" }
+      }
+    },
+    {
       "match": "^((\\+)|(\\([ivx]+\\))|(\\d+\\.)|(\\([a-z]\\))|(\\*|†|‡|§|||¶)|(\\-)) ",
       "name": "keyword.control.claytext"
     },

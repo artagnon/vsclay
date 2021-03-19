@@ -1,0 +1,549 @@
+{
+  "\\begin": {
+    "scope": "latex.injection",
+    "prefix": "\\begin",
+    "body": "\\begin{$1}"
+  },
+  "\\section": {
+    "scope": "latex.injection",
+    "prefix": "\\section",
+    "body": "\\section{$1}"
+  },
+  "\\subsection": {
+    "scope": "latex.injection",
+    "prefix": "\\subsection",
+    "body": "\\subsection{$1}"
+  },
+  "\\subsubsection": {
+    "scope": "latex.injection",
+    "prefix": "\\subsubsection",
+    "body": "\\subsubsection{$1}"
+  },
+  "\\footnote": {
+    "scope": "latex.injection",
+    "prefix": "\\footnote",
+    "body": "\\footnote{$1}"
+  },
+  "\\cite": {
+    "scope": "latex.injection",
+    "prefix": "\\cite",
+    "body": "\\cite{$1}",
+    "description": "reference"
+  },
+  "\\textcite": {
+    "scope": "latex.injection",
+    "prefix": "\\textcite",
+    "body": "\\textcite{$1}",
+    "description": "reference"
+  },
+  "\\parencite": {
+    "scope": "latex.injection",
+    "prefix": "\\parencite",
+    "body": "\\parencite{$1}",
+    "description": "reference"
+  },
+  "\\citeyear": {
+    "scope": "latex.injection",
+    "prefix": "\\citeyear",
+    "body": "\\citeyear{$1}"
+  },
+  "\\shortcite": {
+    "scope": "latex.injection",
+    "prefix": "\\shortcite",
+    "body": "\\shortcite{$1}"
+  },
+  "\\emph": {
+    "scope": "latex.injection",
+    "prefix": "\\emph",
+    "body": "\\emph{$1}"
+  },
+  "\\textbf": {
+    "scope": "latex.injection",
+    "prefix": "\\textbf",
+    "body": "\\textbf{$1}"
+  },
+  "\\textit": {
+    "scope": "latex.injection",
+    "prefix": "\\textit",
+    "body": "\\textit{$1}"
+  },
+  "\\textmd": {
+    "scope": "latex.injection",
+    "prefix": "\\textmd",
+    "body": "\\textmd{$1}"
+  },
+  "\\textnormal": {
+    "scope": "latex.injection",
+    "prefix": "\\textnormal",
+    "body": "\\textnormal{$1}"
+  },
+  "\\textrm": {
+    "scope": "latex.injection",
+    "prefix": "\\textrm",
+    "body": "\\textrm{$1}"
+  },
+  "\\textsc": {
+    "scope": "latex.injection",
+    "prefix": "\\textsc",
+    "body": "\\textsc{$1}"
+  },
+  "\\textsf": {
+    "scope": "latex.injection",
+    "prefix": "\\textsf",
+    "body": "\\textsf{$1}"
+  },
+  "\\textsl": {
+    "scope": "latex.injection",
+    "prefix": "\\textsl",
+    "body": "\\textsl{$1}",
+    "description": "slanted text"
+  },
+  "\\texttt": {
+    "scope": "latex.injection",
+    "prefix": "\\texttt",
+    "body": "\\texttt{$1}"
+  },
+  "\\textup": {
+    "scope": "latex.injection",
+    "prefix": "\\textup",
+    "body": "\\textup{$1}"
+  },
+  "\\textwidth": {
+    "scope": "latex.injection",
+    "prefix": "\\textwidth",
+    "body": "\\textwidth"
+  },
+  "\\ttfamily": {
+    "scope": "latex.injection",
+    "prefix": "\\ttfamily",
+    "body": "\\ttfamily"
+  },
+  "\\label{}": {
+    "scope": "latex.injection",
+    "prefix": "\\label{...}",
+    "body": "\\label{$1}"
+  },
+  "\\cref": {
+    "scope": "latex.injection",
+    "prefix": "\\cref",
+    "body": "\\cref{$1}"
+  },
+  "\\ref": {
+    "scope": "latex.injection",
+    "prefix": "\\ref",
+    "body": "\\ref{$1}"
+  },
+  "\\cpageref": {
+    "scope": "latex.injection",
+    "prefix": "\\cpageref",
+    "body": "\\cpageref{$1}"
+  },
+  "\\pageref": {
+    "scope": "latex.injection",
+    "prefix": "\\pageref",
+    "body": "\\pageref{$1}"
+  },
+  "\\author": {
+    "scope": "latex.injection",
+    "prefix": "\\author",
+    "body": "\\author{$1}"
+  },
+  "\\pagestyle": {
+    "scope": "latex.injection",
+    "prefix": "\\pagestyle",
+    "body": "\\pagestyle{$1}"
+  },
+  "\\hspace": {
+    "scope": "latex.injection",
+    "prefix": "\\hspace",
+    "body": "\\hspace{${1:l}}"
+  },
+  "\\hspace*": {
+    "scope": "latex.injection",
+    "prefix": "\\hspace*",
+    "body": "\\hspace*{${1:l}}"
+  },
+  "\\vspace": {
+    "scope": "latex.injection",
+    "prefix": "\\vspace",
+    "body": "\\vspace{${1:l}}"
+  },
+  "\\vspace*": {
+    "scope": "latex.injection",
+    "prefix": "\\vspace*",
+    "body": "\\vspace*{${1:l}}"
+  },
+  "\\usepackage": {
+    "scope": "latex.injection",
+    "prefix": "\\usepackage",
+    "body": "\\usepackage{$1}"
+  },
+  "\\item": {
+    "scope": "latex.injection",
+    "prefix": "\\item",
+    "body": "\\item $0"
+  },
+  "\\multicolumn": {
+    "scope": "latex.injection",
+    "prefix": "\\multicolumn",
+    "body": "\\multicolumn{${1:n}}{${2:cols}}{${3:text}}"
+  },
+  "\\linespread": {
+    "scope": "latex.injection",
+    "prefix": "\\linespread",
+    "body": "\\linespread{${1:x}}"
+  },
+  "\\date": {
+    "scope": "latex.injection",
+    "prefix": "\\date",
+    "body": "\\date{$1}"
+  },
+  "\\underline": {
+    "scope": "latex.injection",
+    "prefix": "\\underline",
+    "body": "\\underline{$1}"
+  },
+  "\\rule": {
+    "scope": "latex.injection",
+    "prefix": "\\rule",
+    "body": "\\rule{${1:width}}{${2:height}}"
+  },
+  "\\pagebreak": {
+    "scope": "latex.injection",
+    "prefix": "\\pagebreak"
+  },
+  "\\noindent": {
+    "scope": "latex.injection",
+    "prefix": "\\noindent"
+  },
+  "\\nonumber": {
+    "scope": "latex.injection",
+    "prefix": "\\nonumber",
+    "description": "Insert nonumber"
+  },
+  "\\cline": {
+    "scope": "latex.injection",
+    "prefix": "\\cline",
+    "body": "\\cline{${1:x}-${2:y}}"
+  },
+  "\\text": {
+    "scope": "latex.injection",
+    "prefix": "\\text",
+    "body": "\\text{$1}"
+  },
+  "\\sqrt": {
+    "scope": "latex.injection",
+    "prefix": "\\sqrt",
+    "body": "\\sqrt{$1}"
+  },
+  "\\frac": {
+    "scope": "latex.injection",
+    "prefix": "\\frac",
+    "body": "\\frac{$1}{$2}"
+  },
+  "\\bar": {
+    "scope": "latex.injection",
+    "prefix": "\\bar",
+    "body": "\\bar{$1}"
+  },
+  "\\dot": {
+    "scope": "latex.injection",
+    "prefix": "\\dot",
+    "body": "\\dot{$1}"
+  },
+  "\\ddot": {
+    "scope": "latex.injection",
+    "prefix": "\\ddot",
+    "body": "\\ddot{$1}"
+  },
+  "\\acute": {
+    "scope": "latex.injection",
+    "prefix": "\\acute",
+    "body": "\\acute{$1}",
+    "description": " ́"
+  },
+  "\\breve": {
+    "scope": "latex.injection",
+    "prefix": "\\breve",
+    "body": "\\breve{$1}",
+    "description": " ̆"
+  },
+  "\\check": {
+    "scope": "latex.injection",
+    "prefix": "\\check",
+    "body": "\\check{$1}",
+    "description": " ̌"
+  },
+  "\\grave": {
+    "scope": "latex.injection",
+    "prefix": "\\grave",
+    "body": "\\grave{$1}",
+    "description": " ̀"
+  },
+  "\\hat": {
+    "scope": "latex.injection",
+    "prefix": "\\hat",
+    "body": "\\hat{$1}",
+    "description": " ̂"
+  },
+  "\\widehat": {
+    "scope": "latex.injection",
+    "prefix": "\\widehat",
+    "body": "\\widehat{$1}",
+    "description": " ̂"
+  },
+  "\\tilde": {
+    "scope": "latex.injection",
+    "prefix": "\\tilde",
+    "body": "\\tilde{$1}",
+    "description": " ̃"
+  },
+  "\\widetilde": {
+    "scope": "latex.injection",
+    "prefix": "\\widetilde",
+    "body": "\\widetilde{$1}",
+    "description": " ̃"
+  },
+  "\\vec": {
+    "scope": "latex.injection",
+    "prefix": "\\vec",
+    "body": "\\vec{$1}"
+  },
+  "\\input": {
+    "scope": "latex.injection",
+    "prefix": "\\input",
+    "body": "\\input{$1}"
+  },
+  "\\include": {
+    "scope": "latex.injection",
+    "prefix": "\\include",
+    "body": "\\include{$1}"
+  },
+  "\\subfileincludegraphics": {
+    "scope": "latex.injection",
+    "prefix": "\\subfileincludegraphics",
+    "body": "\\subfile{$1}"
+  },
+  "\\includegraphics": {
+    "scope": "latex.injection",
+    "prefix": "\\includegraphics",
+    "body": "\\includegraphics{$1}"
+  },
+  "\\addcontentsline": {
+    "scope": "latex.injection",
+    "prefix": "\\addcontentsline",
+    "body": "\\addcontentsline{${1:file}}{${2:secunit}}{${3:entry}}"
+  },
+  "\\appendix": {
+    "scope": "latex.injection",
+    "prefix": "\\appendix",
+    "body": "\\appendix"
+  },
+  "\\appendixname": {
+    "scope": "latex.injection",
+    "prefix": "\\appendixname",
+    "body": "\\appendixname"
+  },
+  "\\arabic": {
+    "scope": "latex.injection",
+    "prefix": "\\arabic",
+    "body": "\\arabic{${1:counter}}"
+  },
+  "\\ensuremath": {
+    "scope": "latex.injection",
+    "prefix": "\\ensuremath",
+    "body": "\\ensuremath{${1:text}}"
+  },
+  "\\bibitem": {
+    "scope": "latex.injection",
+    "prefix": "\\bibitem",
+    "body": "\\bibitem{${1:citekey}}"
+  },
+  "\\caption": {
+    "scope": "latex.injection",
+    "prefix": "\\caption",
+    "body": "\\caption[${2:short}]{${1:title}}"
+  },
+  "\\cleardoublepage": {
+    "scope": "latex.injection",
+    "prefix": "\\cleardoublepage",
+    "body": "\\cleardoublepage"
+  },
+  "\\contentsline{}{}{}": {
+    "scope": "latex.injection",
+    "prefix": "\\contentsline{type}{text}{page}",
+    "body": "\\contentsline{${1:type}}{${2:text}}{${3:page}}"
+  },
+  "\\contentsname": {
+    "scope": "latex.injection",
+    "prefix": "\\contentsname",
+    "body": "\\contentsname{${1:name}}"
+  },
+  "\\fbox": {
+    "scope": "latex.injection",
+    "prefix": "\\fbox",
+    "body": "\\fbox{${1:text}}"
+  },
+  "\\figurename": {
+    "scope": "latex.injection",
+    "prefix": "\\figurename",
+    "body": "\\figurename{${1:name}}"
+  },
+  "\\footnotetext": {
+    "scope": "latex.injection",
+    "prefix": "\\footnotetext",
+    "body": "\\footnotetext{${1:text}}"
+  },
+  "\\includeonly": {
+    "scope": "latex.injection",
+    "prefix": "\\includeonly",
+    "body": "\\includeonly{${1:filelist}}"
+  },
+  "\\indexname": {
+    "scope": "latex.injection",
+    "prefix": "\\indexname",
+    "body": "\\indexname{${1:name}}"
+  },
+  "\\index": {
+    "scope": "latex.injection",
+    "prefix": "\\index",
+    "body": "\\index{${1:entry}}"
+  },
+  "\\marginpar": {
+    "scope": "latex.injection",
+    "prefix": "\\marginpar",
+    "body": "\\marginpar[${2:left}]{${1:right}}"
+  },
+  "\\mbox": {
+    "scope": "latex.injection",
+    "prefix": "\\mbox",
+    "body": "\\mbox{${1:text}}"
+  },
+  "\\newtheorem": {
+    "scope": "latex.injection",
+    "prefix": "\\newtheorem",
+    "body": "\\newtheorem{${1:envname}}{${2:caption}}[${3:within}]"
+  },
+  "\\nocite": {
+    "scope": "latex.injection",
+    "prefix": "\\nocite",
+    "body": "\\nocite{${1:keylist}}"
+  },
+  "\\nolinebreak": {
+    "scope": "latex.injection",
+    "prefix": "\\nolinebreak",
+    "body": "\\nolinebreak[${1:number}]"
+  },
+  "\\underbrace": {
+    "scope": "latex.injection",
+    "prefix": "\\underbrace",
+    "body": "\\underbrace{${1:text}}"
+  },
+  "\\overbrace": {
+    "scope": "latex.injection",
+    "prefix": "\\overbrace",
+    "body": "\\overbrace{${1:text}}",
+    "description": "⏞"
+  },
+  "\\overline": {
+    "scope": "latex.injection",
+    "prefix": "\\overline",
+    "body": "\\overline{${1:text}}",
+    "description": " ̅"
+  },
+  "\\parbox": {
+    "scope": "latex.injection",
+    "prefix": "\\parbox",
+    "body": "\\parbox{${1:width}}{${2:text}}"
+  },
+  "\\section*": {
+    "scope": "latex.injection",
+    "prefix": "\\section*",
+    "body": "\\section*{${1:title}}"
+  },
+  "\\stackrel": {
+    "scope": "latex.injection",
+    "prefix": "\\stackrel",
+    "body": "\\stackrel{${1:above}}{${2:under}}"
+  },
+  "\\thispagestyle": {
+    "scope": "latex.injection",
+    "prefix": "\\thispagestyle",
+    "body": "\\thispagestyle{${1:empty/plain/headings/myheadings}}"
+  },
+  "\\newcommand": {
+    "scope": "latex.injection",
+    "prefix": "\\newcommand",
+    "body": "\\newcommand{${1:cmd}}{${2:def}}"
+  },
+  "\\renewcommand": {
+    "scope": "latex.injection",
+    "prefix": "\\renewcommand",
+    "body": "\\renewcommand{${1:cmd}}{${2:def}}"
+  },
+  "\\roman": {
+    "scope": "latex.injection",
+    "prefix": "\\roman",
+    "body": "\\roman{${1:counter}}"
+  },
+  "\\Roman": {
+    "scope": "latex.injection",
+    "prefix": "\\Roman",
+    "body": "\\Roman{${1:counter}}"
+  },
+  "\\framebox": {
+    "scope": "latex.injection",
+    "prefix": "\\framebox",
+    "body": "\\framebox[${2:width}][${3:position}]{${1:text}}"
+  },
+  "\\mathbb": {
+    "scope": "latex.injection",
+    "prefix": "\\mathbb",
+    "body": "\\mathbb{${1:text}}"
+  },
+  "\\mathbf": {
+    "scope": "latex.injection",
+    "prefix": "\\mathbf",
+    "body": "\\mathbf{${1:text}}"
+  },
+  "\\mathcal": {
+    "scope": "latex.injection",
+    "prefix": "\\mathcal",
+    "body": "\\mathcal{${1:text}}"
+  },
+  "\\mathds": {
+    "scope": "latex.injection",
+    "prefix": "\\mathds",
+    "body": "\\mathds{${1:text}}"
+  },
+  "\\mathit": {
+    "scope": "latex.injection",
+    "prefix": "\\mathit",
+    "body": "\\mathit{${1:text}}"
+  },
+  "\\mathnormal": {
+    "scope": "latex.injection",
+    "prefix": "\\mathnormal",
+    "body": "\\mathnormal{${1:text}}"
+  },
+  "\\mathrm": {
+    "scope": "latex.injection",
+    "prefix": "\\mathrm",
+    "body": "\\mathrm{${1:text}}"
+  },
+  "\\mathscr": {
+    "scope": "latex.injection",
+    "prefix": "\\mathscr",
+    "body": "\\mathscr{${1:text}}"
+  },
+  "\\mathsf": {
+    "scope": "latex.injection",
+    "prefix": "\\mathsf",
+    "body": "\\mathsf{${1:text}}"
+  },
+  "\\mathtt": {
+    "scope": "latex.injection",
+    "prefix": "\\mathtt",
+    "body": "\\mathtt{${1:text}}"
+  }
+}

@@ -28,24 +28,24 @@
         "extensions": [
           ".clay"
         ],
-        "configuration": "claytext.configuration.json"
+        "configuration": "claytext-configuration.json"
       }
     ],
     "snippets": [
       {
         "language": "claytext",
-        "path": "./snippets/latex.json"
+        "path": "./snippets/mathjax.json"
       }
     ],
     "grammars": [
       {
         "language": "claytext",
         "scopeName": "text.claytext",
-        "path": "./syntax/claytext.tmGrammar.json"
+        "path": "./syntax/claytext.json"
       },
       {
         "scopeName": "latex.injection",
-        "path": "./syntax/latexInjection.tmGrammar.json",
+        "path": "./syntax/latexInjection.json",
         "injectTo": [
           "text.claytext"
         ],
@@ -55,7 +55,7 @@
       },
       {
         "scopeName": "coq.injection",
-        "path": "./syntax/coqInjection.tmGrammar.json",
+        "path": "./syntax/coqInjection.json",
         "injectTo": [
           "text.claytext"
         ],
@@ -65,7 +65,7 @@
       },
       {
         "scopeName": "cpp.injection",
-        "path": "./syntax/cppInjection.tmGrammar.json",
+        "path": "./syntax/cppInjection.json",
         "injectTo": [
           "text.claytext"
         ],
@@ -75,7 +75,7 @@
       },
       {
         "scopeName": "rs.injection",
-        "path": "./syntax/rsInjection.tmGrammar.json",
+        "path": "./syntax/rsInjection.json",
         "injectTo": [
           "text.claytext"
         ],
@@ -85,7 +85,7 @@
       },
       {
         "scopeName": "hs.injection",
-        "path": "./syntax/hsInjection.tmGrammar.json",
+        "path": "./syntax/hsInjection.json",
         "injectTo": [
           "text.claytext"
         ],
