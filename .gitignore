@@ -1,6 +1,5 @@
-out
-node_modules
-.vscode-test/
+out/
+node_modules/
 *.vsix
 *.tsbuildinfo
 .DS_Store

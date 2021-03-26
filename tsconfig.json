@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+      "module": "CommonJS",
+      "sourceMap": true,
+      "strict": true,
+      "target": "ESNext",
+      "outDir": "out"
+  },
+  "files": ["main.ts"]
+}
