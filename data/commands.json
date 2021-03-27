@@ -1,430 +1,430 @@
 {
   "begin": {
-    "prefix": "begin",
-    "body": "begin{$1}"
+    "command": "begin",
+    "snippet": "begin{$1}"
   },
   "section": {
-    "prefix": "section",
-    "body": "section{$1}"
+    "command": "section",
+    "snippet": "section{$1}"
   },
   "subsection": {
-    "prefix": "subsection",
-    "body": "subsection{$1}"
+    "command": "subsection",
+    "snippet": "subsection{$1}"
   },
   "subsubsection": {
-    "prefix": "subsubsection",
-    "body": "subsubsection{$1}"
+    "command": "subsubsection",
+    "snippet": "subsubsection{$1}"
   },
   "footnote": {
-    "prefix": "footnote",
-    "body": "footnote{$1}"
+    "command": "footnote",
+    "snippet": "footnote{$1}"
   },
   "cite": {
-    "prefix": "cite",
-    "body": "cite{$1}",
-    "description": "reference"
+    "command": "cite",
+    "snippet": "cite{$1}",
+    "documentation": "reference"
   },
   "textcite": {
-    "prefix": "textcite",
-    "body": "textcite{$1}",
-    "description": "reference"
+    "command": "textcite",
+    "snippet": "textcite{$1}",
+    "documentation": "reference"
   },
   "parencite": {
-    "prefix": "parencite",
-    "body": "parencite{$1}",
-    "description": "reference"
+    "command": "parencite",
+    "snippet": "parencite{$1}",
+    "documentation": "reference"
   },
   "citeyear": {
-    "prefix": "citeyear",
-    "body": "citeyear{$1}"
+    "command": "citeyear",
+    "snippet": "citeyear{$1}"
   },
   "shortcite": {
-    "prefix": "shortcite",
-    "body": "shortcite{$1}"
+    "command": "shortcite",
+    "snippet": "shortcite{$1}"
   },
   "emph": {
-    "prefix": "emph",
-    "body": "emph{$1}"
+    "command": "emph",
+    "snippet": "emph{$1}"
   },
   "textbf": {
-    "prefix": "textbf",
-    "body": "textbf{$1}"
+    "command": "textbf",
+    "snippet": "textbf{$1}"
   },
   "textit": {
-    "prefix": "textit",
-    "body": "textit{$1}"
+    "command": "textit",
+    "snippet": "textit{$1}"
   },
   "textmd": {
-    "prefix": "textmd",
-    "body": "textmd{$1}"
+    "command": "textmd",
+    "snippet": "textmd{$1}"
   },
   "textnormal": {
-    "prefix": "textnormal",
-    "body": "textnormal{$1}"
+    "command": "textnormal",
+    "snippet": "textnormal{$1}"
   },
   "textrm": {
-    "prefix": "textrm",
-    "body": "textrm{$1}"
+    "command": "textrm",
+    "snippet": "textrm{$1}"
   },
   "textsc": {
-    "prefix": "textsc",
-    "body": "textsc{$1}"
+    "command": "textsc",
+    "snippet": "textsc{$1}"
   },
   "textsf": {
-    "prefix": "textsf",
-    "body": "textsf{$1}"
+    "command": "textsf",
+    "snippet": "textsf{$1}"
   },
   "textsl": {
-    "prefix": "textsl",
-    "body": "textsl{$1}",
-    "description": "slanted text"
+    "command": "textsl",
+    "snippet": "textsl{$1}",
+    "documentation": "slanted text"
   },
   "texttt": {
-    "prefix": "texttt",
-    "body": "texttt{$1}"
+    "command": "texttt",
+    "snippet": "texttt{$1}"
   },
   "textup": {
-    "prefix": "textup",
-    "body": "textup{$1}"
+    "command": "textup",
+    "snippet": "textup{$1}"
   },
   "textwidth": {
-    "prefix": "textwidth",
-    "body": "textwidth"
+    "command": "textwidth",
+    "snippet": "textwidth"
   },
   "ttfamily": {
-    "prefix": "ttfamily",
-    "body": "ttfamily"
+    "command": "ttfamily",
+    "snippet": "ttfamily"
   },
   "label{}": {
-    "prefix": "label{...}",
-    "body": "label{$1}"
+    "command": "label{...}",
+    "snippet": "label{$1}"
   },
   "cref": {
-    "prefix": "cref",
-    "body": "cref{$1}"
+    "command": "cref",
+    "snippet": "cref{$1}"
   },
   "ref": {
-    "prefix": "ref",
-    "body": "ref{$1}"
+    "command": "ref",
+    "snippet": "ref{$1}"
   },
   "cpageref": {
-    "prefix": "cpageref",
-    "body": "cpageref{$1}"
+    "command": "cpageref",
+    "snippet": "cpageref{$1}"
   },
   "pageref": {
-    "prefix": "pageref",
-    "body": "pageref{$1}"
+    "command": "pageref",
+    "snippet": "pageref{$1}"
   },
   "author": {
-    "prefix": "author",
-    "body": "author{$1}"
+    "command": "author",
+    "snippet": "author{$1}"
   },
   "pagestyle": {
-    "prefix": "pagestyle",
-    "body": "pagestyle{$1}"
+    "command": "pagestyle",
+    "snippet": "pagestyle{$1}"
   },
   "hspace": {
-    "prefix": "hspace",
-    "body": "hspace{${1:l}}"
+    "command": "hspace",
+    "snippet": "hspace{${1:l}}"
   },
   "hspace*": {
-    "prefix": "hspace*",
-    "body": "hspace*{${1:l}}"
+    "command": "hspace*",
+    "snippet": "hspace*{${1:l}}"
   },
   "vspace": {
-    "prefix": "vspace",
-    "body": "vspace{${1:l}}"
+    "command": "vspace",
+    "snippet": "vspace{${1:l}}"
   },
   "vspace*": {
-    "prefix": "vspace*",
-    "body": "vspace*{${1:l}}"
+    "command": "vspace*",
+    "snippet": "vspace*{${1:l}}"
   },
   "usepackage": {
-    "prefix": "usepackage",
-    "body": "usepackage{$1}"
+    "command": "usepackage",
+    "snippet": "usepackage{$1}"
   },
   "item": {
-    "prefix": "item",
-    "body": "item $0"
+    "command": "item",
+    "snippet": "item $0"
   },
   "multicolumn": {
-    "prefix": "multicolumn",
-    "body": "multicolumn{${1:n}}{${2:cols}}{${3:text}}"
+    "command": "multicolumn",
+    "snippet": "multicolumn{${1:n}}{${2:cols}}{${3:text}}"
   },
   "linespread": {
-    "prefix": "linespread",
-    "body": "linespread{${1:x}}"
+    "command": "linespread",
+    "snippet": "linespread{${1:x}}"
   },
   "date": {
-    "prefix": "date",
-    "body": "date{$1}"
+    "command": "date",
+    "snippet": "date{$1}"
   },
   "underline": {
-    "prefix": "underline",
-    "body": "underline{$1}"
+    "command": "underline",
+    "snippet": "underline{$1}"
   },
   "rule": {
-    "prefix": "rule",
-    "body": "rule{${1:width}}{${2:height}}"
-  },
-  "pagebreak": {
-    "prefix": "pagebreak"
-  },
-  "noindent": {
-    "prefix": "noindent"
+    "command": "rule",
+    "snippet": "rule{${1:width}}{${2:height}}"
   },
   "nonumber": {
-    "prefix": "nonumber",
-    "description": "Insert nonumber"
+    "command": "nonumber",
+    "documentation": "Insert nonumber"
   },
   "cline": {
-    "prefix": "cline",
-    "body": "cline{${1:x}-${2:y}}"
+    "command": "cline",
+    "snippet": "cline{${1:x}-${2:y}}"
   },
   "text": {
-    "prefix": "text",
-    "body": "text{$1}"
+    "command": "text",
+    "snippet": "text{$1}",
+    "documentation": "Plain text in math mode"
   },
   "sqrt": {
-    "prefix": "sqrt",
-    "body": "sqrt{$1}"
+    "command": "sqrt",
+    "snippet": "sqrt{$1}",
+    "detail": "√"
   },
   "frac": {
-    "prefix": "frac",
-    "body": "frac{$1}{$2}"
+    "command": "frac",
+    "snippet": "frac{$1}{$2}"
   },
   "bar": {
-    "prefix": "bar",
-    "body": "bar{$1}"
+    "command": "bar",
+    "snippet": "bar{$1}"
   },
   "dot": {
-    "prefix": "dot",
-    "body": "dot{$1}"
+    "command": "dot",
+    "snippet": "dot{$1}"
   },
   "ddot": {
-    "prefix": "ddot",
-    "body": "ddot{$1}"
+    "command": "ddot",
+    "snippet": "ddot{$1}"
   },
   "acute": {
-    "prefix": "acute",
-    "body": "acute{$1}",
-    "description": " ́"
+    "command": "acute",
+    "snippet": "acute{$1}",
+    "detail": " ́"
   },
   "breve": {
-    "prefix": "breve",
-    "body": "breve{$1}",
-    "description": " ̆"
+    "command": "breve",
+    "snippet": "breve{$1}",
+    "detail": " ̆"
   },
   "check": {
-    "prefix": "check",
-    "body": "check{$1}",
-    "description": " ̌"
+    "command": "check",
+    "snippet": "check{$1}",
+    "detail": " ̌"
   },
   "grave": {
-    "prefix": "grave",
-    "body": "grave{$1}",
-    "description": " ̀"
+    "command": "grave",
+    "snippet": "grave{$1}",
+    "detail": " ̀"
   },
   "hat": {
-    "prefix": "hat",
-    "body": "hat{$1}",
-    "description": " ̂"
+    "command": "hat",
+    "snippet": "hat{$1}",
+    "detail": " ̂"
   },
   "widehat": {
-    "prefix": "widehat",
-    "body": "widehat{$1}",
-    "description": " ̂"
+    "command": "widehat",
+    "snippet": "widehat{$1}",
+    "detail": " ̂"
   },
   "tilde": {
-    "prefix": "tilde",
-    "body": "tilde{$1}",
-    "description": " ̃"
+    "command": "tilde",
+    "snippet": "tilde{$1}",
+    "detail": " ̃"
   },
   "widetilde": {
-    "prefix": "widetilde",
-    "body": "widetilde{$1}",
-    "description": " ̃"
+    "command": "widetilde",
+    "snippet": "widetilde{$1}",
+    "detail": " ̃"
   },
   "vec": {
-    "prefix": "vec",
-    "body": "vec{$1}"
+    "command": "vec",
+    "snippet": "vec{$1}"
   },
   "input": {
-    "prefix": "input",
-    "body": "input{$1}"
+    "command": "input",
+    "snippet": "input{$1}"
   },
   "include": {
-    "prefix": "include",
-    "body": "include{$1}"
+    "command": "include",
+    "snippet": "include{$1}"
   },
   "subfileincludegraphics": {
-    "prefix": "subfileincludegraphics",
-    "body": "subfile{$1}"
+    "command": "subfileincludegraphics",
+    "snippet": "subfile{$1}"
   },
   "includegraphics": {
-    "prefix": "includegraphics",
-    "body": "includegraphics{$1}"
+    "command": "includegraphics",
+    "snippet": "includegraphics{$1}"
   },
   "addcontentsline": {
-    "prefix": "addcontentsline",
-    "body": "addcontentsline{${1:file}}{${2:secunit}}{${3:entry}}"
+    "command": "addcontentsline",
+    "snippet": "addcontentsline{${1:file}}{${2:secunit}}{${3:entry}}"
   },
   "appendix": {
-    "prefix": "appendix",
-    "body": "appendix"
+    "command": "appendix",
+    "snippet": "appendix"
   },
   "appendixname": {
-    "prefix": "appendixname",
-    "body": "appendixname"
+    "command": "appendixname",
+    "snippet": "appendixname"
   },
   "arabic": {
-    "prefix": "arabic",
-    "body": "arabic{${1:counter}}"
+    "command": "arabic",
+    "snippet": "arabic{${1:counter}}"
   },
   "ensuremath": {
-    "prefix": "ensuremath",
-    "body": "ensuremath{${1:text}}"
+    "command": "ensuremath",
+    "snippet": "ensuremath{${1:text}}"
   },
   "bibitem": {
-    "prefix": "bibitem",
-    "body": "bibitem{${1:citekey}}"
+    "command": "bibitem",
+    "snippet": "bibitem{${1:citekey}}"
   },
   "caption": {
-    "prefix": "caption",
-    "body": "caption[${2:short}]{${1:title}}"
+    "command": "caption",
+    "snippet": "caption[${2:short}]{${1:title}}"
   },
   "fbox": {
-    "prefix": "fbox",
-    "body": "fbox{${1:text}}"
+    "command": "fbox",
+    "snippet": "fbox{${1:text}}"
   },
   "figurename": {
-    "prefix": "figurename",
-    "body": "figurename{${1:name}}"
+    "command": "figurename",
+    "snippet": "figurename{${1:name}}"
   },
   "footnotetext": {
-    "prefix": "footnotetext",
-    "body": "footnotetext{${1:text}}"
+    "command": "footnotetext",
+    "snippet": "footnotetext{${1:text}}"
   },
   "includeonly": {
-    "prefix": "includeonly",
-    "body": "includeonly{${1:filelist}}"
+    "command": "includeonly",
+    "snippet": "includeonly{${1:filelist}}"
   },
   "indexname": {
-    "prefix": "indexname",
-    "body": "indexname{${1:name}}"
+    "command": "indexname",
+    "snippet": "indexname{${1:name}}"
   },
   "index": {
-    "prefix": "index",
-    "body": "index{${1:entry}}"
+    "command": "index",
+    "snippet": "index{${1:entry}}"
   },
   "marginpar": {
-    "prefix": "marginpar",
-    "body": "marginpar[${2:left}]{${1:right}}"
+    "command": "marginpar",
+    "snippet": "marginpar[${2:left}]{${1:right}}"
   },
   "mbox": {
-    "prefix": "mbox",
-    "body": "mbox{${1:text}}"
-  },
-  "newtheorem": {
-    "prefix": "newtheorem",
-    "body": "newtheorem{${1:envname}}{${2:caption}}[${3:within}]"
+    "command": "mbox",
+    "snippet": "mbox{${1:text}}"
   },
   "nocite": {
-    "prefix": "nocite",
-    "body": "nocite{${1:keylist}}"
+    "command": "nocite",
+    "snippet": "nocite{${1:keylist}}"
   },
   "nolinebreak": {
-    "prefix": "nolinebreak",
-    "body": "nolinebreak[${1:number}]"
+    "command": "nolinebreak",
+    "snippet": "nolinebreak[${1:number}]"
   },
   "underbrace": {
-    "prefix": "underbrace",
-    "body": "underbrace{${1:text}}"
+    "command": "underbrace",
+    "snippet": "underbrace{${1:text}}"
   },
   "overbrace": {
-    "prefix": "overbrace",
-    "body": "overbrace{${1:text}}",
-    "description": "⏞"
+    "command": "overbrace",
+    "snippet": "overbrace{${1:text}}",
+    "documentation": "⏞"
   },
   "overline": {
-    "prefix": "overline",
-    "body": "overline{${1:text}}",
-    "description": " ̅"
+    "command": "overline",
+    "snippet": "overline{${1:text}}",
+    "documentation": " ̅"
   },
   "parbox": {
-    "prefix": "parbox",
-    "body": "parbox{${1:width}}{${2:text}}"
+    "command": "parbox",
+    "snippet": "parbox{${1:width}}{${2:text}}"
   },
   "section*": {
-    "prefix": "section*",
-    "body": "section*{${1:title}}"
+    "command": "section*",
+    "snippet": "section*{${1:title}}"
   },
   "stackrel": {
-    "prefix": "stackrel",
-    "body": "stackrel{${1:above}}{${2:under}}"
+    "command": "stackrel",
+    "snippet": "stackrel{${1:above}}{${2:under}}"
   },
   "thispagestyle": {
-    "prefix": "thispagestyle",
-    "body": "thispagestyle{${1}}"
+    "command": "thispagestyle",
+    "snippet": "thispagestyle{${1}}"
   },
   "newcommand": {
-    "prefix": "newcommand",
-    "body": "newcommand{${1:cmd}}{${2:def}}"
+    "command": "newcommand",
+    "snippet": "newcommand{${1:cmd}}{${2:def}}"
   },
   "renewcommand": {
-    "prefix": "renewcommand",
-    "body": "renewcommand{${1:cmd}}{${2:def}}"
+    "command": "renewcommand",
+    "snippet": "renewcommand{${1:cmd}}{${2:def}}"
   },
   "roman": {
-    "prefix": "roman",
-    "body": "roman{${1:counter}}"
+    "command": "roman",
+    "snippet": "roman{${1:counter}}"
   },
   "Roman": {
-    "prefix": "Roman",
-    "body": "Roman{${1:counter}}"
+    "command": "Roman",
+    "snippet": "Roman{${1:counter}}"
   },
   "framebox": {
-    "prefix": "framebox",
-    "body": "framebox[${2:width}][${3:position}]{${1:text}}"
+    "command": "framebox",
+    "snippet": "framebox[${2:width}][${3:position}]{${1:text}}"
   },
   "mathbb": {
-    "prefix": "mathbb",
-    "body": "mathbb{${1:text}}"
+    "command": "mathbb",
+    "snippet": "mathbb{${1:text}}",
+    "documentation": "Math blackboard"
+  },
+  "mathfrak": {
+    "command": "mathfrak",
+    "snippet": "mathfrak{${1:text}}",
+    "documentation": "Math fraktur"
   },
   "mathbf": {
-    "prefix": "mathbf",
-    "body": "mathbf{${1:text}}"
+    "command": "mathbf",
+    "snippet": "mathbf{${1:text}}",
+    "documentation": "Math boldface"
   },
   "mathcal": {
-    "prefix": "mathcal",
-    "body": "mathcal{${1:text}}"
+    "command": "mathcal",
+    "snippet": "mathcal{${1:text}}"
   },
   "mathds": {
-    "prefix": "mathds",
-    "body": "mathds{${1:text}}"
+    "command": "mathds",
+    "snippet": "mathds{${1:text}}"
   },
   "mathit": {
-    "prefix": "mathit",
-    "body": "mathit{${1:text}}"
+    "command": "mathit",
+    "snippet": "mathit{${1:text}}",
+    "documentation": "Math italic"
   },
   "mathnormal": {
-    "prefix": "mathnormal",
-    "body": "mathnormal{${1:text}}"
+    "command": "mathnormal",
+    "snippet": "mathnormal{${1:text}}"
   },
   "mathrm": {
-    "prefix": "mathrm",
-    "body": "mathrm{${1:text}}"
+    "command": "mathrm",
+    "snippet": "mathrm{${1:text}}"
   },
   "mathscr": {
-    "prefix": "mathscr",
-    "body": "mathscr{${1:text}}"
+    "command": "mathscr",
+    "snippet": "mathscr{${1:text}}"
   },
   "mathsf": {
-    "prefix": "mathsf",
-    "body": "mathsf{${1:text}}"
+    "command": "mathsf",
+    "snippet": "mathsf{${1:text}}"
   },
   "mathtt": {
-    "prefix": "mathtt",
-    "body": "mathtt{${1:text}}"
+    "command": "mathtt",
+    "snippet": "mathtt{${1:text}}"
   }
 }

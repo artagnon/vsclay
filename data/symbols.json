@@ -18,7 +18,8 @@
     "command": "arccos"
   },
   "arcsin": {
-    "command": "arcsin"
+    "command": "arcsin",
+    "detail": "arc sine"
   },
   "arctan": {
     "command": "arctan"
@@ -169,7 +170,8 @@
     "documentation": "coproduct operator"
   },
   "cos": {
-    "command": "cos"
+    "command": "cos",
+    "detail": "cosine"
   },
   "cosh": {
     "command": "cosh"
@@ -532,7 +534,7 @@
   "perp": {
     "command": "perp",
     "detail": "⟂",
-    "documentation": "PERPENDICULAR"
+    "documentation": "perpendicular"
   },
   "Pr": {
     "command": "Pr"
@@ -540,37 +542,37 @@
   "prec": {
     "command": "prec",
     "detail": "≺",
-    "documentation": "PRECEDES"
+    "documentation": "precedes"
   },
   "preceq": {
     "command": "preceq",
     "detail": "⪯",
-    "documentation": "PRECEDES ABOVE SINGLE-LINE EQUALS sign"
+    "documentation": "precedes above single-line equals sign"
   },
   "propto": {
     "command": "propto",
     "detail": "∝",
-    "documentation": "is PROPORTIONAL TO"
+    "documentation": "is proportional to"
   },
   "rangle": {
     "command": "rangle",
     "detail": "⟩",
-    "documentation": "mathematical italic smallBRACKET"
+    "documentation": "right angled bracket"
   },
   "rbrace": {
     "command": "rbrace",
     "detail": "}",
-    "documentation": "Right curly bracket"
+    "documentation": "right curly bracket"
   },
   "rbrack": {
     "command": "rbrack",
     "detail": "]",
-    "documentation": "Right square bracket"
+    "documentation": "right square bracket"
   },
   "rceil": {
     "command": "rceil",
     "detail": "⌉",
-    "documentation": "Right ceiling"
+    "documentation": "right ceiling"
   },
   "Re": {
     "command": "Re",
@@ -580,12 +582,12 @@
   "rfloor": {
     "command": "rfloor",
     "detail": "⌋",
-    "documentation": "Right floor"
+    "documentation": "right floor"
   },
   "rgroup": {
     "command": "rgroup",
     "detail": "⟯",
-    "documentation": "mathematical italic smallNED paranthesis"
+    "documentation": "grouped paranthesis"
   },
   "rightharpoondown": {
     "command": "rightharpoondown",
@@ -605,7 +607,7 @@
   "rmoustache": {
     "command": "rmoustache",
     "detail": "⎱",
-    "documentation": "? \\rmous upper Right or lower left curly bracket sign"
+    "documentation": "upper-left or lower-right curly bracket sign"
   },
   "searrow": {
     "command": "searrow",
@@ -618,7 +620,7 @@
   "sharp": {
     "command": "sharp",
     "detail": "♯",
-    "documentation": "= \\ MUSIC SHARP sign, z notation infix bag count"
+    "documentation": "music sharp sign"
   },
   "sim": {
     "command": "sim",
@@ -631,10 +633,12 @@
     "documentation": "similar, equals"
   },
   "sin": {
-    "command": "sin"
+    "command": "sin",
+    "documentation": "sine"
   },
   "sinh": {
-    "command": "sinh"
+    "command": "sinh",
+    "documentation": "hyperbolic sine"
   },
   "smile": {
     "command": "smile",
@@ -1031,11 +1035,12 @@
   "implies": {
     "command": "implies",
     "detail": "⇒",
-    "documentation": "Implication symbol, aliased to Rightarrow"
+    "documentation": "implication symbol, aliased to Rightarrow"
   },
   "infty": {
     "command": "infty",
-    "detail": "∞"
+    "detail": "∞",
+    "documentation": "infinity symbol"
   },
   "div": {
     "command": "div",
@@ -1081,36 +1086,49 @@
     "command": "times",
     "detail": "×"
   },
+  "ldots": {
+    "command": "ldots",
+    "detail": "...",
+    "description": "ellipses"
+  },
   "cdots": {
     "command": "cdots",
-    "detail": "···"
+    "detail": "···",
+    "description": "centered dots"
   },
   "cap": {
     "command": "cap",
-    "detail": "∩"
+    "detail": "∩",
+    "description": "set intersection"
   },
   "bigcap": {
     "command": "bigcap",
-    "detail": "∩"
+    "detail": "∩",
+    "description": "big set intersection"
   },
   "cup": {
     "command": "cup",
-    "detail": "∪"
+    "detail": "∪",
+    "description": "set union"
   },
   "bigcup": {
     "command": "bigcup",
-    "detail": "∪"
+    "detail": "∪",
+    "description": "big set union"
   },
   "vee": {
     "command": "vee",
-    "detail": "∨"
+    "detail": "∨",
+    "description": "logic or"
   },
   "prod": {
     "command": "prod",
     "detail": "∏"
   },
   "circ": {
-    "command": "circ"
+    "command": "circ",
+    "detail": "￮",
+    "description": "function composition"
   },
   "wedge": {
     "command": "wedge",
