@@ -178,7 +178,7 @@
   "text": {
     "command": "text",
     "snippet": "text{$1}",
-    "documentation": "Plain text in math mode"
+    "documentation": "plain text in math mode"
   },
   "sqrt": {
     "command": "sqrt",
@@ -336,12 +336,12 @@
   "overbrace": {
     "command": "overbrace",
     "snippet": "overbrace{${1:text}}",
-    "documentation": "⏞"
+    "detail": "⏞"
   },
   "overline": {
     "command": "overline",
     "snippet": "overline{${1:text}}",
-    "documentation": " ̅"
+    "detail": " ̅"
   },
   "parbox": {
     "command": "parbox",
@@ -382,17 +382,17 @@
   "mathbb": {
     "command": "mathbb",
     "snippet": "mathbb{${1:text}}",
-    "documentation": "Math blackboard"
+    "documentation": "math blackboard"
   },
   "mathfrak": {
     "command": "mathfrak",
     "snippet": "mathfrak{${1:text}}",
-    "documentation": "Math fraktur"
+    "documentation": "math fraktur"
   },
   "mathbf": {
     "command": "mathbf",
     "snippet": "mathbf{${1:text}}",
-    "documentation": "Math boldface"
+    "documentation": "math boldface"
   },
   "mathcal": {
     "command": "mathcal",
@@ -405,7 +405,7 @@
   "mathit": {
     "command": "mathit",
     "snippet": "mathit{${1:text}}",
-    "documentation": "Math italic"
+    "documentation": "math italic"
   },
   "mathnormal": {
     "command": "mathnormal",
@@ -425,6 +425,7 @@
   },
   "mathtt": {
     "command": "mathtt",
-    "snippet": "mathtt{${1:text}}"
+    "snippet": "mathtt{${1:text}}",
+    "documentation": "math teletype (monospace)"
   }
 }

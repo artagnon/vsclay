@@ -44,10 +44,6 @@ interface CommandEntry extends SymbolEntry {
   snippet: string;
 }
 
-function isCommandEntry(obj: any): obj is CommandEntry {
-  return typeof obj.command == "string" && typeof obj.snippet == "string";
-}
-
 function snippetString(obj: CommandEntry): SnippetString {
   return new SnippetString(obj.snippet);
 }
@@ -74,18 +70,13 @@ class Completer extends Extension implements CompletionItemProvider {
     _ctx: CompletionContext
   ): CompletionItem[] {
     const snippets = new Map(
-      Object.entries(this.commands)
-        .filter(([_, v]) => isCommandEntry(v))
-        .map(([k, v]) => [k, snippetString(v)])
+      Object.entries(this.commands).map(([k, v]) => [k, snippetString(v)])
     );
-    const symbolSuggestions = Object.keys(this.symbols).map(
+    const suggestions = Object.keys(this.allObjs).map(
       (k) => new CompletionItem(k, vscode.CompletionItemKind.Variable)
     );
-    const snippetSuggestions = Object.keys(this.commands).map(
-      (k) => new CompletionItem(k, vscode.CompletionItemKind.Function)
-    );
-    snippetSuggestions.forEach((i) => (i.insertText = snippets.get(i.label)));
-    return symbolSuggestions.concat(snippetSuggestions);
+    suggestions.forEach((i) => (i.insertText = snippets.get(i.label)));
+    return suggestions;
   }
 }
 
