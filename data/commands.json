@@ -16,7 +16,7 @@
     "snippet": "bar{$1}"
   },
   "begin": {
-    "snippet": "begin{${1|align,align*,alignat,alignat*,aligned,alignedat,array,Bmatrix,bmatrix,cases,CD,eqnarray,eqnarray*,equation,equation*,gather,gather*,gathered,matrix,multline,multline*,pmatrix,smallmatrix,split,subarray,Vmatrix,vmatrix|}}"
+    "snippet": "begin{$1}"
   },
   "bibitem": {
     "snippet": "bibitem{${1:citekey}}"

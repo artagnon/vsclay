@@ -54,13 +54,22 @@ class Completer extends Extension implements CompletionItemProvider {
     super(extensionRoot);
   }
 
-  provideCompletionItems(_doc: TextDocument, _pos: Position, _tok: CancellationToken, _ctx: CompletionContext): CompletionItem[] {
+  provideCompletionItems(doc: TextDocument, pos: Position, _tok: CancellationToken, ctx: CompletionContext): CompletionItem[] | null {
+    const currentLine = doc.lineAt(pos.line).text;
+    if (ctx.triggerCharacter == "{" || currentLine[pos.character - 1] == "{") {
+      if (doc.getText(doc.getWordRangeAtPosition(pos.translate(0, -2))) != "begin") return null;
+      const docStrings = new Map(Object.entries(this.environments).map(([k, v]) => [k, docString(v)]));
+      const suggestions = Object.keys(this.environments).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Constant));
+      suggestions.forEach((s) => (s.detail = docStrings.get(s.label)));
+      return suggestions;
+    }
     const snippets = new Map(Object.entries(this.commands).map(([k, v]) => [k, snippetString(v)]));
     const docStrings = new Map(Object.entries(this.allObjs).map(([k, v]) => [k, docString(v)]));
-    const suggestions = Object.keys(this.allObjs).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Variable));
-    suggestions.forEach((i) => {
-      i.insertText = snippets.get(i.label);
-      i.detail = docStrings.get(i.label);
+    const suggestions = Object.keys(this.allObjs).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Function));
+    suggestions.forEach((s) => {
+      s.insertText = snippets.get(s.label);
+      if (s.label == "begin") s.command = { command: "editor.action.triggerSuggest", title: "Re-trigger suggestions" };
+      s.detail = docStrings.get(s.label);
     });
     return suggestions;
   }
@@ -72,16 +81,23 @@ class Hoverer extends Extension implements HoverProvider {
   }
   provideHover(document: TextDocument, position: Position, _: CancellationToken): Hover | null {
     const tok = document.getText(document.getWordRangeAtPosition(position));
-    const matchingEntries = Object.entries(this.allObjs).filter(([k, _]) => k == tok);
+    const matchingEntries = Object.entries(this.allObjs)
+      .filter(([k, _]) => k == tok)
+      .map(([_, v]) => v);
     if (matchingEntries.length == 0) return null;
-    const match = matchingEntries[0][1];
+    const match = matchingEntries[0];
     return containsDoc(match) ? new Hover(docString(match)) : null;
   }
 }
 
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(
-    vscode.languages.registerCompletionItemProvider({ scheme: "file", language: "claytext" }, new Completer(context.extensionPath), "\\")
+    vscode.languages.registerCompletionItemProvider(
+      { scheme: "file", language: "claytext" },
+      new Completer(context.extensionPath),
+      "\\",
+      "{"
+    )
   );
   context.subscriptions.push(
     vscode.languages.registerHoverProvider({ scheme: "file", language: "claytext" }, new Hoverer(context.extensionPath))
