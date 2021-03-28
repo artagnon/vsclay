@@ -148,16 +148,18 @@
     "snippet": "mathnormal{${1:text}}"
   },
   "mathrm": {
+    "documentation": "math roman",
     "snippet": "mathrm{${1:text}}"
   },
   "mathscr": {
+    "documentation": "math script",
     "snippet": "mathscr{${1:text}}"
   },
   "mathsf": {
     "snippet": "mathsf{${1:text}}"
   },
   "mathtt": {
-    "documentation": "math teletype (monospace)",
+    "documentation": "math typewriter (monospace)",
     "snippet": "mathtt{${1:text}}"
   },
   "mbox": {

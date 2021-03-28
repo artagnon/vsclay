@@ -53,8 +53,12 @@ class Completer extends Extension implements CompletionItemProvider {
   }
   provideCompletionItems(_doc: TextDocument, _pos: Position, _tok: CancellationToken, _ctx: CompletionContext): CompletionItem[] {
     const snippets = new Map(Object.entries(this.commands).map(([k, v]) => [k, snippetString(v)]));
+    const docStrings = new Map(Object.entries(this.allObjs).map(([k, v]) => [k, docString(v)]));
     const suggestions = Object.keys(this.allObjs).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Variable));
-    suggestions.forEach((i) => (i.insertText = snippets.get(i.label)));
+    suggestions.forEach((i) => {
+      i.insertText = snippets.get(i.label);
+      i.detail = docStrings.get(i.label);
+    });
     return suggestions;
   }
 }

@@ -430,7 +430,7 @@
   },
   "Leftrightarrow": {
     "detail": "⇔",
-    "documentation": "the logic symbol"
+    "documentation": "the logic symbol iff"
   },
   "leq": {
     "detail": "≤"
