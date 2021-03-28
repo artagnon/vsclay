@@ -1,0 +1,83 @@
+{
+  "align": {
+    "documentation": "numbered align environment"
+  },
+  "align*": {
+    "documentation": "unnumbered align environment"
+  },
+  "alignat": {
+    "documentation": "numbered align-at environment"
+  },
+  "alignat*": {
+    "documentation": "unnumbered align-at environment"
+  },
+  "aligned": {
+    "documentation": "aligned environment"
+  },
+  "alignedat": {
+    "documentation": "aligned-at environment"
+  },
+  "array": {
+    "documentation": "array environment"
+  },
+  "Bmatrix": {
+    "documentation": "block matrix environment"
+  },
+  "bmatrix": {
+    "documentation": "block matrix environment"
+  },
+  "cases": {
+    "documentation": "cases environment"
+  },
+  "CD": {
+    "documentation": "commutative-diagram environment"
+  },
+  "eqnarray": {
+    "documentation": "numbered equation-array environment"
+  },
+  "eqnarray*": {
+    "documentation": "unnumbered equation-array environment"
+  },
+  "equation": {
+    "documentation": "numbered equation environment"
+  },
+  "equation*": {
+    "documentation": "unnumbered equation environment"
+  },
+  "gather": {
+    "documentation": "numbered gathered environment"
+  },
+  "gather*": {
+    "documentation": "unnumbered gather align environment"
+  },
+  "gathered": {
+    "documentation": "align environment"
+  },
+  "matrix": {
+    "documentation": "matrix environment"
+  },
+  "multline": {
+    "documentation": "numbered multiline environment"
+  },
+  "multline*": {
+    "documentation": "unnumbered multiline environment"
+  },
+  "pmatrix": {
+    "documentation": "matrix environment"
+  },
+  "smallmatrix": {
+    "documentation": "small matrix environment"
+  },
+  "split": {
+    "documentation": "split environment"
+  },
+  "subarray": {
+    "documentation": "subarray environment"
+  },
+  "Vmatrix": {
+    "documentation": "vertical matrix environment"
+  },
+  "vmatrix": {
+    "documentation": "vertical matrix environment"
+  }
+}
