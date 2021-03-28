@@ -18,11 +18,13 @@ abstract class Extension {
   protected symbols: Object;
   protected commands: Object;
   protected allObjs: Object;
+  protected environments: Object;
   constructor(extensionRoot: string) {
     this.extensionRoot = extensionRoot;
     this.symbols = JSON.parse(readFileSync(`${this.extensionRoot}/data/symbols.json`, { encoding: "utf8" }));
     this.commands = JSON.parse(readFileSync(`${this.extensionRoot}/data/commands.json`, { encoding: "utf8" }));
     this.allObjs = { ...this.symbols, ...this.commands };
+    this.environments = JSON.parse(readFileSync(`${this.extensionRoot}/data/environments.json`, { encoding: "utf8" }));
   }
 }
 
@@ -51,6 +53,7 @@ class Completer extends Extension implements CompletionItemProvider {
   constructor(extensionRoot: string) {
     super(extensionRoot);
   }
+
   provideCompletionItems(_doc: TextDocument, _pos: Position, _tok: CancellationToken, _ctx: CompletionContext): CompletionItem[] {
     const snippets = new Map(Object.entries(this.commands).map(([k, v]) => [k, snippetString(v)]));
     const docStrings = new Map(Object.entries(this.allObjs).map(([k, v]) => [k, docString(v)]));
