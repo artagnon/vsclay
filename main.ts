@@ -45,8 +45,12 @@ function containsDoc(obj: any): obj is DocumentEntry {
   return typeof obj.detail == "string" || typeof obj.documentation == "string";
 }
 
-function docString(obj: DocumentEntry) {
+function docString(obj: DocumentEntry): string {
   return (obj.detail ? obj.detail?.toString() + "\n--\n" : "") + (obj.documentation ? obj.documentation?.toString() : "");
+}
+
+function strFnMap<T>(obj: Object, fn: (param: CommandEntry) => T) {
+  return new Map(Object.entries(obj).map(([k, v]) => [k, fn(v)]));
 }
 
 class Completer extends Extension implements CompletionItemProvider {
@@ -58,13 +62,13 @@ class Completer extends Extension implements CompletionItemProvider {
     const currentLine = doc.lineAt(pos.line).text;
     if (ctx.triggerCharacter == "{" || currentLine[pos.character - 1] == "{") {
       if (doc.getText(doc.getWordRangeAtPosition(pos.translate(0, -2))) != "begin") return null;
-      const docStrings = new Map(Object.entries(this.environments).map(([k, v]) => [k, docString(v)]));
+      const docStrings = strFnMap(this.environments, docString);
       const suggestions = Object.keys(this.environments).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Constant));
       suggestions.forEach((s) => (s.detail = docStrings.get(s.label)));
       return suggestions;
     }
-    const snippets = new Map(Object.entries(this.commands).map(([k, v]) => [k, snippetString(v)]));
-    const docStrings = new Map(Object.entries(this.allObjs).map(([k, v]) => [k, docString(v)]));
+    const snippets = strFnMap(this.commands, snippetString);
+    const docStrings = strFnMap(this.allObjs, docString);
     const suggestions = Object.keys(this.allObjs).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Function));
     suggestions.forEach((s) => {
       s.insertText = snippets.get(s.label);
