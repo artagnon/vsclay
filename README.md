@@ -1,4 +1,3 @@
-
 # vsclay
 
 [![](https://img.shields.io/visual-studio-marketplace/d/artagnon.vsclay?logo=visual-studio-code&style=for-the-badge&labelColor=000000&label=Downloads)](https://marketplace.visualstudio.com/items?itemName=artagnon.vsclay)
@@ -9,4 +8,4 @@ A full-featured vscode extension to syntax-highlight [claytext](https://github.c
 
 ![syntax highlighting demo](assets/syntax-demo.png)
 
-![IntelliSense demo](https://user-images.githubusercontent.com/37226/113474233-24866400-946f-11eb-8e72-b82460d16c71.mp4)
+![IntelliSense demo](assets/intellisense-demo.gif)
