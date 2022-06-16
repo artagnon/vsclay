@@ -1080,13 +1080,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs@npm:^0.0.1-security":
-  version: 0.0.1-security
-  resolution: "fs@npm:0.0.1-security"
-  checksum: 0bb4dbc28772183fed666a8822959607ef515995a01362c8f7204594478a138edd2834ac908fd2745d21a07611a3e5fdd751f822ad38b4166c035011d72b06a7
-  languageName: node
-  linkType: hard
-
 "function-bind@npm:^1.1.1":
   version: 1.1.1
   resolution: "function-bind@npm:1.1.1"
@@ -2179,7 +2172,6 @@ __metadata:
     "@types/prettier": "npm:^2.6.3"
     "@types/vscode": "npm:^1.68.0"
     eslint: "npm:^8.17.0"
-    fs: "npm:^0.0.1-security"
     prettier: "npm:^2.7.1"
     ts-loader: "npm:^9.3.0"
     typescript: "npm:^4.7.3"
