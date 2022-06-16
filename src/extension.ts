@@ -21,10 +21,22 @@ abstract class Extension {
   protected environments: Object;
   constructor(extensionRoot: string) {
     this.extensionRoot = extensionRoot;
-    this.symbols = JSON.parse(readFileSync(`${this.extensionRoot}/data/symbols.json`, { encoding: "utf8" }));
-    this.commands = JSON.parse(readFileSync(`${this.extensionRoot}/data/commands.json`, { encoding: "utf8" }));
+    this.symbols = JSON.parse(
+      readFileSync(`${this.extensionRoot}/data/symbols.json`, {
+        encoding: "utf8",
+      })
+    );
+    this.commands = JSON.parse(
+      readFileSync(`${this.extensionRoot}/data/commands.json`, {
+        encoding: "utf8",
+      })
+    );
     this.allObjs = { ...this.symbols, ...this.commands };
-    this.environments = JSON.parse(readFileSync(`${this.extensionRoot}/data/environments.json`, { encoding: "utf8" }));
+    this.environments = JSON.parse(
+      readFileSync(`${this.extensionRoot}/data/environments.json`, {
+        encoding: "utf8",
+      })
+    );
   }
 }
 
@@ -46,7 +58,10 @@ function containsDoc(obj: any): obj is DocumentEntry {
 }
 
 function docString(obj: DocumentEntry): string {
-  return (obj.detail ? obj.detail?.toString() + "\n--\n" : "") + (obj.documentation ? obj.documentation?.toString() : "");
+  return (
+    (obj.detail ? obj.detail?.toString() + "\n--\n" : "") +
+    (obj.documentation ? obj.documentation?.toString() : "")
+  );
 }
 
 function strFnMap<T>(obj: Object, fn: (param: CommandEntry) => T) {
@@ -58,22 +73,40 @@ class Completer extends Extension implements CompletionItemProvider {
     super(extensionRoot);
   }
 
-  provideCompletionItems(doc: TextDocument, pos: Position, _tok: CancellationToken, ctx: CompletionContext): CompletionItem[] | null {
+  provideCompletionItems(
+    doc: TextDocument,
+    pos: Position,
+    _tok: CancellationToken,
+    ctx: CompletionContext
+  ): CompletionItem[] | null {
     const currentLine = doc.lineAt(pos.line).text;
     if (ctx.triggerCharacter == "{" || currentLine[pos.character - 1] == "{") {
-      if (doc.getText(doc.getWordRangeAtPosition(pos.translate(0, -2))) != "begin") return null;
+      if (
+        doc.getText(doc.getWordRangeAtPosition(pos.translate(0, -2))) != "begin"
+      )
+        return null;
       const docStrings = strFnMap(this.environments, docString);
-      const suggestions = Object.keys(this.environments).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Constant));
-      suggestions.forEach((s) => (s.detail = docStrings.get(s.label)));
+      const suggestions = Object.keys(this.environments).map(
+        (k) => new CompletionItem(k, vscode.CompletionItemKind.Constant)
+      );
+      suggestions.forEach(
+        (s) => (s.detail = docStrings.get(s.label as string))
+      );
       return suggestions;
     }
     const snippets = strFnMap(this.commands, snippetString);
     const docStrings = strFnMap(this.allObjs, docString);
-    const suggestions = Object.keys(this.allObjs).map((k) => new CompletionItem(k, vscode.CompletionItemKind.Function));
+    const suggestions = Object.keys(this.allObjs).map(
+      (k) => new CompletionItem(k, vscode.CompletionItemKind.Function)
+    );
     suggestions.forEach((s) => {
-      s.insertText = snippets.get(s.label);
-      if (s.label == "begin") s.command = { command: "editor.action.triggerSuggest", title: "Re-trigger suggestions" };
-      s.detail = docStrings.get(s.label);
+      s.insertText = snippets.get(s.label as string);
+      if (s.label == "begin")
+        s.command = {
+          command: "editor.action.triggerSuggest",
+          title: "Re-trigger suggestions",
+        };
+      s.detail = docStrings.get(s.label as string);
     });
     return suggestions;
   }
@@ -83,7 +116,11 @@ class Hoverer extends Extension implements HoverProvider {
   constructor(extensionRoot: string) {
     super(extensionRoot);
   }
-  provideHover(document: TextDocument, position: Position, _: CancellationToken): Hover | null {
+  provideHover(
+    document: TextDocument,
+    position: Position,
+    _: CancellationToken
+  ): Hover | null {
     const tok = document.getText(document.getWordRangeAtPosition(position));
     const matchingEntries = Object.entries(this.allObjs)
       .filter(([k, _]) => k == tok)
@@ -99,11 +136,14 @@ export function activate(context: ExtensionContext) {
     vscode.languages.registerCompletionItemProvider(
       { scheme: "file", language: "claytext" },
       new Completer(context.extensionPath),
-      "\\",
+      "[^\\]\\",
       "{"
     )
   );
   context.subscriptions.push(
-    vscode.languages.registerHoverProvider({ scheme: "file", language: "claytext" }, new Hoverer(context.extensionPath))
+    vscode.languages.registerHoverProvider(
+      { scheme: "file", language: "claytext" },
+      new Hoverer(context.extensionPath)
+    )
   );
 }

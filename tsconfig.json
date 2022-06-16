@@ -1,10 +1,10 @@
 {
+  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
-      "module": "CommonJS",
-      "sourceMap": true,
-      "strict": true,
-      "target": "ESNext",
-      "outDir": "out"
+    "sourceMap": true,
+    "outDir": "dist",
+    "module": "CommonJS",
+    "lib": ["ES2022"]
   },
-  "files": ["main.ts"]
+  "files": ["src/extension.ts"]
 }
