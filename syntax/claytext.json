@@ -99,6 +99,20 @@
     {
       "match": "^(--|\\.\\.)$",
       "name": "keyword.control.claytext"
+    },
+    {
+      "match": " \\\\\\\\$",
+      "name": "keyword.control.claytext"
+    },
+    {
+      "begin": "!_{",
+      "end": "}",
+      "name": "markup.italic.claytext"
+    },
+    {
+      "begin": "!{",
+      "end": "}",
+      "name": "markup.bold.claytext"
     }
   ]
 }
