@@ -237,21 +237,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^20.0.0":
   version: 20.8.10
   resolution: "@types/node@npm:20.8.10"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 9/3070799de6324652fec38b412afc3698054a233590c695e043d93058f695b611b5b63d193e662bc884f5c4a1545b2c71bd94b5658d376ccf90c606a9cfb579ee
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^18.13.0":
-  version: 18.18.8
-  resolution: "@types/node@npm:18.18.8"
-  dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 9/416d6107d179feccb6c624ec01293c93b58a426b2abebb5362484d39d9d4c6192576aef03ad3a0fe3e7315e46e472822d61b89219b659b108cb539c65ccdd769
   languageName: node
   linkType: hard
 
@@ -2382,7 +2373,7 @@ __metadata:
   dependencies:
     "@tsconfig/node18": "npm:^18.0.0"
     "@types/eslint": "npm:^8.21.0"
-    "@types/node": "npm:^18.13.0"
+    "@types/node": "npm:^20.0.0"
     "@types/prettier": "npm:^2.7.2"
     "@types/vscode": "npm:^1.75.0"
     eslint: "npm:^8.33.0"
