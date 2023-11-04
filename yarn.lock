@@ -3,7 +3,7 @@
 
 __metadata:
   version: 8
-  cacheKey: 10
+  cacheKey: 10c0
 
 "@aashutoshrathi/word-wrap@npm:^1.2.3":
   version: 1.2.6
@@ -189,10 +189,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node18@npm:^1.0.1":
-  version: 1.0.3
-  resolution: "@tsconfig/node18@npm:1.0.3"
-  checksum: 9/ea2c21b7a389423f0cbdf8d5024cbaf74b0e9ea75fe0c2efc018db7d7277261ae95cadc4e778d949d05291f2181b28c50f327625f13aa92e63ef125477260607
+"@tsconfig/node18@npm:^18.0.0":
+  version: 18.2.2
+  resolution: "@tsconfig/node18@npm:18.2.2"
+  checksum: 71f2c65616125f3ec8c85704ea55100d2131e0c01cbf7a247e5f6f7d617dfaafd5ff4a09b4193bceface4b4f44e9aa909da8e9af3910c01a0661f202386e40af
   languageName: node
   linkType: hard
 
@@ -1970,7 +1970,7 @@ __metadata:
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: 551dd500765cce767c583747f5f21ceb51d437f539b01aee96d6ec39eb2c68a8ff5d646b083d690fe428a81329856bc1bbdb094379b8df4b3f10e7e1f6aa3839
+  checksum: 10/551dd500765cce767c583747f5f21ceb51d437f539b01aee96d6ec39eb2c68a8ff5d646b083d690fe428a81329856bc1bbdb094379b8df4b3f10e7e1f6aa3839
   languageName: node
   linkType: hard
 
@@ -2305,7 +2305,7 @@ __metadata:
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
+  checksum: 10/f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
   languageName: node
   linkType: hard
 
@@ -2380,7 +2380,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vsclay@workspace:."
   dependencies:
-    "@tsconfig/node18": "npm:^1.0.1"
+    "@tsconfig/node18": "npm:^18.0.0"
     "@types/eslint": "npm:^8.21.0"
     "@types/node": "npm:^18.13.0"
     "@types/prettier": "npm:^2.7.2"
