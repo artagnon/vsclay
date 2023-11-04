@@ -1830,12 +1830,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.4":
-  version: 2.8.8
-  resolution: "prettier@npm:2.8.8"
+"prettier@npm:^3.0.0":
+  version: 3.0.3
+  resolution: "prettier@npm:3.0.3"
   bin:
-    prettier: bin-prettier.js
-  checksum: 38b0a43ea17e83f54b904f8808f7d0fd1d9705ef9627bb40017ee276cbd6f5e7d15bcf816c4467b64cfe14ef109369a981ce61fad9c6022749d041f74a672188
+    prettier: bin/prettier.cjs
+  checksum: 467e8febce083cba26791b1be3e9ecfee08593a151b7d54803d93bef87033242c3cfdf86cd7ce559b6eda2d1f8d1e54f87bf4a58f6f0258540fe4990753418fc
   languageName: node
   linkType: hard
 
@@ -2322,7 +2322,7 @@ __metadata:
     "@types/prettier": "npm:^2.7.2"
     "@types/vscode": "npm:^1.75.0"
     eslint: "npm:^8.33.0"
-    prettier: "npm:^2.8.4"
+    prettier: "npm:^3.0.0"
     ts-loader: "npm:^9.4.2"
     typescript: "npm:^4.9.5"
     vsce-yarn-patch: "npm:^1.66.2"
