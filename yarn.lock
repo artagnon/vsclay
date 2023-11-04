@@ -133,10 +133,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node18@npm:^1.0.1":
-  version: 1.0.3
-  resolution: "@tsconfig/node18@npm:1.0.3"
-  checksum: ea2c21b7a389423f0cbdf8d5024cbaf74b0e9ea75fe0c2efc018db7d7277261ae95cadc4e778d949d05291f2181b28c50f327625f13aa92e63ef125477260607
+"@tsconfig/node18@npm:^18.0.0":
+  version: 18.2.2
+  resolution: "@tsconfig/node18@npm:18.2.2"
+  checksum: e3ac34ea4c71418fb329aebb8dcecb7db454a6dbb49fd54525cf8ac75e6257016addab018e3c2ec1cfdc95b1ee6b16b127bb3980452c618d2163e03376bc8d58
   languageName: node
   linkType: hard
 
@@ -2316,7 +2316,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vsclay@workspace:."
   dependencies:
-    "@tsconfig/node18": "npm:^1.0.1"
+    "@tsconfig/node18": "npm:^18.0.0"
     "@types/eslint": "npm:^8.21.0"
     "@types/node": "npm:^18.13.0"
     "@types/prettier": "npm:^2.7.2"
