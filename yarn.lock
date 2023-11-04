@@ -134,9 +134,9 @@ __metadata:
   linkType: hard
 
 "@tsconfig/node18@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@tsconfig/node18@npm:1.0.1"
-  checksum: ec5a7916499125fbd4ea671e542fd5c3f66d5eda91a60e1f8b8beb5218c3ac780020f82b43d6e683ee09923f3ea3ee62e828626edaa10652e10c032ac716c47d
+  version: 1.0.3
+  resolution: "@tsconfig/node18@npm:1.0.3"
+  checksum: ea2c21b7a389423f0cbdf8d5024cbaf74b0e9ea75fe0c2efc018db7d7277261ae95cadc4e778d949d05291f2181b28c50f327625f13aa92e63ef125477260607
   languageName: node
   linkType: hard
 
