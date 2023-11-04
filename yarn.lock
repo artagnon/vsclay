@@ -191,10 +191,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.13.0":
-  version: 18.13.0
-  resolution: "@types/node@npm:18.13.0"
-  checksum: 591b7b9a97dbeaa155c3fe1a00e22fc13241781bda02f4e96935811723e7719fe18ed003301551cfa3273488cc7cf2f99146b752abc9b60aaab57bcbc67da830
+"@types/node@npm:^20.0.0":
+  version: 20.8.10
+  resolution: "@types/node@npm:20.8.10"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 3070799de6324652fec38b412afc3698054a233590c695e043d93058f695b611b5b63d193e662bc884f5c4a1545b2c71bd94b5658d376ccf90c606a9cfb579ee
   languageName: node
   linkType: hard
 
@@ -2266,6 +2268,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 7f556493e22e9023f1f9be0d516f5c3cf74d1d6a090c2701ada5117e99900e8cdf8b5540ad3ceed1a672d3532bdfcd0149c444b980731aacc840eb0660ba8587
+  languageName: node
+  linkType: hard
+
 "uri-js@npm:^4.2.2":
   version: 4.4.1
   resolution: "uri-js@npm:4.4.1"
@@ -2318,7 +2327,7 @@ __metadata:
   dependencies:
     "@tsconfig/node18": "npm:^1.0.1"
     "@types/eslint": "npm:^8.21.0"
-    "@types/node": "npm:^18.13.0"
+    "@types/node": "npm:^20.0.0"
     "@types/prettier": "npm:^2.7.2"
     "@types/vscode": "npm:^1.75.0"
     eslint: "npm:^8.33.0"
