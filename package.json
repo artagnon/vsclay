@@ -16,7 +16,7 @@
   "description": "Syntax definition for claytext",
   "version": "0.4.5",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^2023.0.0"
   },
   "main": "./dist/extension.js",
   "categories": [
