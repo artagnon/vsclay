@@ -1,6 +1,7 @@
 .mailmap
 .yarnrc.yml
-package.json
+.pnp.*
+renovate.json
 webpack.config.js
 .vscode/
 src/
