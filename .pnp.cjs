@@ -437,10 +437,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["acorn", [\
-      ["npm:8.11.2", {\
-        "packageLocation": "../../../../cache/others/berry/cache/acorn-npm-8.11.2-a470f49bb6-10c0.zip/node_modules/acorn/",\
+      ["npm:8.11.3", {\
+        "packageLocation": "../../../../cache/others/berry/cache/acorn-npm-8.11.3-0d7ab48b38-10c0.zip/node_modules/acorn/",\
         "packageDependencies": [\
-          ["acorn", "npm:8.11.2"]\
+          ["acorn", "npm:8.11.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -458,7 +458,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["acorn-import-assertions", "virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:1.9.0"],\
           ["@types/acorn", null],\
-          ["acorn", "npm:8.11.2"]\
+          ["acorn", "npm:8.11.3"]\
         ],\
         "packagePeers": [\
           "@types/acorn",\
@@ -527,7 +527,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/browserslist-npm-4.22.2-87e70d8021-10c0.zip/node_modules/browserslist/",\
         "packageDependencies": [\
           ["browserslist", "npm:4.22.2"],\
-          ["caniuse-lite", "npm:1.0.30001571"],\
+          ["caniuse-lite", "npm:1.0.30001572"],\
           ["electron-to-chromium", "npm:1.4.616"],\
           ["node-releases", "npm:2.0.14"],\
           ["update-browserslist-db", "virtual:87e70d802146e5a0e8f2a12b5ab64004040c6640441dba54229a7db766cb1b88edabd3d3c814ce33d6ba839c4e517b12e9b0a7febfca22ac2a64177042bf3ee6#npm:1.0.13"]\
@@ -545,10 +545,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["caniuse-lite", [\
-      ["npm:1.0.30001571", {\
-        "packageLocation": "../../../../cache/others/berry/cache/caniuse-lite-npm-1.0.30001571-eb2fda6438-10c0.zip/node_modules/caniuse-lite/",\
+      ["npm:1.0.30001572", {\
+        "packageLocation": "../../../../cache/others/berry/cache/caniuse-lite-npm-1.0.30001572-a35218739b-10c0.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001571"]\
+          ["caniuse-lite", "npm:1.0.30001572"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1312,7 +1312,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["terser", "npm:5.26.0"],\
           ["@jridgewell/source-map", "npm:0.3.5"],\
-          ["acorn", "npm:8.11.2"],\
+          ["acorn", "npm:8.11.3"],\
           ["commander", "npm:2.20.3"],\
           ["source-map-support", "npm:0.5.21"]\
         ],\
@@ -1320,17 +1320,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["terser-webpack-plugin", [\
-      ["npm:5.3.9", {\
-        "packageLocation": "../../../../cache/others/berry/cache/terser-webpack-plugin-npm-5.3.9-7ba1eb45f4-10c0.zip/node_modules/terser-webpack-plugin/",\
+      ["npm:5.3.10", {\
+        "packageLocation": "../../../../cache/others/berry/cache/terser-webpack-plugin-npm-5.3.10-3bde1920fb-10c0.zip/node_modules/terser-webpack-plugin/",\
         "packageDependencies": [\
-          ["terser-webpack-plugin", "npm:5.3.9"]\
+          ["terser-webpack-plugin", "npm:5.3.10"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:5.3.9", {\
-        "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-bf2eed1ff3/5/cache/others/berry/cache/terser-webpack-plugin-npm-5.3.9-7ba1eb45f4-10c0.zip/node_modules/terser-webpack-plugin/",\
+      ["virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:5.3.10", {\
+        "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-69d8272526/5/cache/others/berry/cache/terser-webpack-plugin-npm-5.3.10-3bde1920fb-10c0.zip/node_modules/terser-webpack-plugin/",\
         "packageDependencies": [\
-          ["terser-webpack-plugin", "virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:5.3.9"],\
+          ["terser-webpack-plugin", "virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:5.3.10"],\
           ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["@swc/core", null],\
           ["@types/esbuild", null],\
@@ -1495,7 +1495,7 @@ const RAW_RUNTIME_STATE =
           ["@webassemblyjs/ast", "npm:1.11.6"],\
           ["@webassemblyjs/wasm-edit", "npm:1.11.6"],\
           ["@webassemblyjs/wasm-parser", "npm:1.11.6"],\
-          ["acorn", "npm:8.11.2"],\
+          ["acorn", "npm:8.11.3"],\
           ["acorn-import-assertions", "virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:1.9.0"],\
           ["browserslist", "npm:4.22.2"],\
           ["chrome-trace-event", "npm:1.0.3"],\
@@ -1511,7 +1511,7 @@ const RAW_RUNTIME_STATE =
           ["neo-async", "npm:2.6.2"],\
           ["schema-utils", "npm:3.3.0"],\
           ["tapable", "npm:2.2.1"],\
-          ["terser-webpack-plugin", "virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:5.3.9"],\
+          ["terser-webpack-plugin", "virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:5.3.10"],\
           ["watchpack", "npm:2.4.0"],\
           ["webpack-cli", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.1.4"],\
           ["webpack-sources", "npm:3.2.3"]\
