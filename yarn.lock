@@ -75,12 +75,12 @@ __metadata:
   linkType: hard
 
 "@types/eslint@npm:*":
-  version: 8.56.0
-  resolution: "@types/eslint@npm:8.56.0"
+  version: 8.56.1
+  resolution: "@types/eslint@npm:8.56.1"
   dependencies:
     "@types/estree": "npm:*"
     "@types/json-schema": "npm:*"
-  checksum: afba97b10d02cb7c7e7658de38f626c65b81be0fe45bc479e058ab14bc089911193811dce681edd656fc6b59c91fd8d0c976972476fc98b5e782b2c3b08aaa6c
+  checksum: a2aa5e2ec16f07944a60b825d6447d66f83369783e31c014ccf582fa92df963aa8d62c447a8fdc4fbfcd7299ad74ed1a753e06e560ce184eab4efceccfa66262
   languageName: node
   linkType: hard
 
@@ -391,9 +391,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001565":
-  version: 1.0.30001572
-  resolution: "caniuse-lite@npm:1.0.30001572"
-  checksum: 7d02570fa576b158d96739f2c65ea3ad22e90a8b028a343902de1f13b7db8512144870f1d29ec5e9ae7189d96158d9643871b6e902e6680a06b27a9afe556da2
+  version: 1.0.30001576
+  resolution: "caniuse-lite@npm:1.0.30001576"
+  checksum: 79cf666f9139c542bdf75eab76171534dc638d2f8efacd325649c8ec6be59de400f0e9d6dc02504f12125626b306c0a848fe86904c01722218b2a479be82a9c1
   languageName: node
   linkType: hard
 
@@ -474,9 +474,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.601":
-  version: 1.4.616
-  resolution: "electron-to-chromium@npm:1.4.616"
-  checksum: a02416f3293d28120d5132546a6aea614ebd2d820a684f41b1c20138331922ddc672c4a59bfc4b91bb5aee1ba608f6c10cd3f69c344cd434397e7f14a4c97348
+  version: 1.4.623
+  resolution: "electron-to-chromium@npm:1.4.623"
+  checksum: 3faa47df308936b4820f642d7957417bdcc8f81f2446adee73147e543653f81be3dcfa973d5e287ed1481a281d4926114c287967d75798f35b3af8ddad169875
   languageName: node
   linkType: hard
 
