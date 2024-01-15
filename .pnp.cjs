@@ -26,7 +26,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.11.1"],\
+          ["@types/node", "npm:20.11.2"],\
           ["@types/vscode", "npm:1.85.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/gen-mapping", "npm:0.3.3"],\
           ["@jridgewell/set-array", "npm:1.1.2"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.15"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.20"]\
+          ["@jridgewell/trace-mapping", "npm:0.3.21"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -81,7 +81,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@jridgewell/source-map", "npm:0.3.5"],\
           ["@jridgewell/gen-mapping", "npm:0.3.3"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.20"]\
+          ["@jridgewell/trace-mapping", "npm:0.3.21"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -96,10 +96,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@jridgewell/trace-mapping", [\
-      ["npm:0.3.20", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@jridgewell-trace-mapping-npm-0.3.20-d90f282910-10c0.zip/node_modules/@jridgewell/trace-mapping/",\
+      ["npm:0.3.21", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@jridgewell-trace-mapping-npm-0.3.21-663b279e65-10c0.zip/node_modules/@jridgewell/trace-mapping/",\
         "packageDependencies": [\
-          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.21"],\
           ["@jridgewell/resolve-uri", "npm:3.1.1"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.15"]\
         ],\
@@ -107,10 +107,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/eslint", [\
-      ["npm:8.56.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-eslint-npm-8.56.1-4da9d680e6-10c0.zip/node_modules/@types/eslint/",\
+      ["npm:8.56.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-eslint-npm-8.56.2-af13c76cd1-10c0.zip/node_modules/@types/eslint/",\
         "packageDependencies": [\
-          ["@types/eslint", "npm:8.56.1"],\
+          ["@types/eslint", "npm:8.56.2"],\
           ["@types/estree", "npm:1.0.5"],\
           ["@types/json-schema", "npm:7.0.15"]\
         ],\
@@ -122,7 +122,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/@types-eslint-scope-npm-3.7.7-efa26592f6-10c0.zip/node_modules/@types/eslint-scope/",\
         "packageDependencies": [\
           ["@types/eslint-scope", "npm:3.7.7"],\
-          ["@types/eslint", "npm:8.56.1"],\
+          ["@types/eslint", "npm:8.56.2"],\
           ["@types/estree", "npm:1.0.5"]\
         ],\
         "linkType": "HARD"\
@@ -147,10 +147,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.11.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.11.1-6a18b13b11-10c0.zip/node_modules/@types/node/",\
+      ["npm:20.11.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.11.2-767862562e-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.11.1"],\
+          ["@types/node", "npm:20.11.2"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -528,7 +528,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["browserslist", "npm:4.22.2"],\
           ["caniuse-lite", "npm:1.0.30001576"],\
-          ["electron-to-chromium", "npm:1.4.623"],\
+          ["electron-to-chromium", "npm:1.4.630"],\
           ["node-releases", "npm:2.0.14"],\
           ["update-browserslist-db", "virtual:87e70d802146e5a0e8f2a12b5ab64004040c6640441dba54229a7db766cb1b88edabd3d3c814ce33d6ba839c4e517b12e9b0a7febfca22ac2a64177042bf3ee6#npm:1.0.13"]\
         ],\
@@ -642,10 +642,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron-to-chromium", [\
-      ["npm:1.4.623", {\
-        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.623-950fa7fa1c-10c0.zip/node_modules/electron-to-chromium/",\
+      ["npm:1.4.630", {\
+        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.630-cfd6250493-10c0.zip/node_modules/electron-to-chromium/",\
         "packageDependencies": [\
-          ["electron-to-chromium", "npm:1.4.623"]\
+          ["electron-to-chromium", "npm:1.4.630"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -909,7 +909,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/jest-worker-npm-27.5.1-1c110b5894-10c0.zip/node_modules/jest-worker/",\
         "packageDependencies": [\
           ["jest-worker", "npm:27.5.1"],\
-          ["@types/node", "npm:20.11.1"],\
+          ["@types/node", "npm:20.11.2"],\
           ["merge-stream", "npm:2.0.0"],\
           ["supports-color", "npm:8.1.1"]\
         ],\
@@ -1205,10 +1205,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["serialize-javascript", [\
-      ["npm:6.0.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/serialize-javascript-npm-6.0.1-fac87289ed-10c0.zip/node_modules/serialize-javascript/",\
+      ["npm:6.0.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/serialize-javascript-npm-6.0.2-cc09461d45-10c0.zip/node_modules/serialize-javascript/",\
         "packageDependencies": [\
-          ["serialize-javascript", "npm:6.0.1"],\
+          ["serialize-javascript", "npm:6.0.2"],\
           ["randombytes", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
@@ -1331,7 +1331,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-69d8272526/5/cache/others/berry/cache/terser-webpack-plugin-npm-5.3.10-3bde1920fb-10c0.zip/node_modules/terser-webpack-plugin/",\
         "packageDependencies": [\
           ["terser-webpack-plugin", "virtual:d8efbf4526ed06265aeaee127e4f973479bc373720bea7d28e263cfb0d56e83810a1cea06207e8346ac47f23f2e3222ac9ac89fda0ec1c6583fc8f91e2fdee32#npm:5.3.10"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.21"],\
           ["@swc/core", null],\
           ["@types/esbuild", null],\
           ["@types/swc__core", null],\
@@ -1340,7 +1340,7 @@ const RAW_RUNTIME_STATE =
           ["esbuild", null],\
           ["jest-worker", "npm:27.5.1"],\
           ["schema-utils", "npm:3.3.0"],\
-          ["serialize-javascript", "npm:6.0.1"],\
+          ["serialize-javascript", "npm:6.0.2"],\
           ["terser", "npm:5.26.0"],\
           ["uglify-js", null],\
           ["webpack", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.89.0"]\
@@ -1456,7 +1456,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["vsclay", "workspace:."],\
-          ["@types/node", "npm:20.11.1"],\
+          ["@types/node", "npm:20.11.2"],\
           ["@types/vscode", "npm:1.85.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
