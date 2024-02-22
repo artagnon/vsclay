@@ -79,8 +79,7 @@ class Completer extends Extension implements CompletionItemProvider {
     _tok: CancellationToken,
     ctx: CompletionContext
   ): CompletionItem[] | null {
-    const currentLine = doc.lineAt(pos.line).text;
-    if (ctx.triggerCharacter == "{" || currentLine[pos.character - 1] == "{") {
+    if (ctx.triggerCharacter == "{") {
       if (
         doc.getText(doc.getWordRangeAtPosition(pos.translate(0, -2))) != "begin"
       )
@@ -94,6 +93,8 @@ class Completer extends Extension implements CompletionItemProvider {
       );
       return suggestions;
     }
+    if (ctx.triggerCharacter != "\\")
+      return null;
     const snippets = strFnMap(this.commands, snippetString);
     const docStrings = strFnMap(this.allObjs, docString);
     const suggestions = Object.keys(this.allObjs).map(
@@ -136,7 +137,7 @@ export function activate(context: ExtensionContext) {
     vscode.languages.registerCompletionItemProvider(
       { scheme: "file", language: "claytext" },
       new Completer(context.extensionPath),
-      "[^\\]\\",
+      "\\",
       "{"
     )
   );

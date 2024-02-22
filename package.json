@@ -16,12 +16,9 @@
   "description": "Syntax definition for claytext",
   "version": "0.4.6",
   "engines": {
-    "vscode": "^1.86.0"
+    "vscode": "^1.87.0"
   },
   "main": "./dist/extension.js",
-  "activationEvents": [
-    "onLanguage:claytext"
-  ],
   "categories": [
     "Programming Languages"
   ],
