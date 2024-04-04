@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@types/node", "npm:20.12.4"],\
-          ["@types/vscode", "npm:1.87.0"],\
+          ["@types/vscode", "npm:1.88.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.4.3#optional!builtin<compat/typescript>::version=5.4.3&hash=5adc0c"],\
           ["webpack", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.91.0"],\
@@ -157,10 +157,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/vscode", [\
-      ["npm:1.87.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-vscode-npm-1.87.0-056b7b2a06-10c0.zip/node_modules/@types/vscode/",\
+      ["npm:1.88.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-vscode-npm-1.88.0-ca969c5c9f-10c0.zip/node_modules/@types/vscode/",\
         "packageDependencies": [\
-          ["@types/vscode", "npm:1.87.0"]\
+          ["@types/vscode", "npm:1.88.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1466,7 +1466,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["vsclay", "workspace:."],\
           ["@types/node", "npm:20.12.4"],\
-          ["@types/vscode", "npm:1.87.0"],\
+          ["@types/vscode", "npm:1.88.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.4.3#optional!builtin<compat/typescript>::version=5.4.3&hash=5adc0c"],\
           ["webpack", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.91.0"],\
