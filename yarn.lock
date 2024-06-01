@@ -141,7 +141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.12.7":
+"@types/node@npm:*":
   version: 20.12.11
   resolution: "@types/node@npm:20.12.11"
   dependencies:
@@ -150,10 +150,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/vscode@npm:^1.88.0":
-  version: 1.88.0
-  resolution: "@types/vscode@npm:1.88.0"
-  checksum: 10c0/3d5f7394d654a3104be668aef0e41a76ac6dbc0319bee54f9070404c73b1f61e1b1ffc2ed2e7efabe7950f5afaa69f1097fa51c2c36c89e3d04b8ded25d28a00
+"@types/node@npm:^20.13.0":
+  version: 20.13.0
+  resolution: "@types/node@npm:20.13.0"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/4fb1ab41d622bbf3434da138bd0f23052e5df3bc59852ea1228cdfe185fd9d66ea71171a68a3106452c883808be7eaa7bc4cd87f534708754d49849e817aa566
+  languageName: node
+  linkType: hard
+
+"@types/vscode@npm:^1.89.0":
+  version: 1.89.0
+  resolution: "@types/vscode@npm:1.89.0"
+  checksum: 10c0/b44a80fc3ef66223a5adcb790f1cca23d698b51b27bd934a38cc809c104d5028e1167cf5b91ed3375fb3c169e88d793952a855b991a6c22d15bc9bee0a846902
   languageName: node
   linkType: hard
 
@@ -2799,8 +2808,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vsclay@workspace:."
   dependencies:
-    "@types/node": "npm:^20.12.7"
-    "@types/vscode": "npm:^1.88.0"
+    "@types/node": "npm:^20.13.0"
+    "@types/vscode": "npm:^1.89.0"
     ts-loader: "npm:^9.5.1"
     typescript: "npm:^5.4.5"
     vsce: "npm:^2.15.0"
