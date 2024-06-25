@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.13.0"],\
+          ["@types/node", "npm:20.14.9"],\
           ["@types/vscode", "npm:1.90.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
@@ -206,18 +206,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.12.11", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.12.11-3c685779f4-10c0.zip/node_modules/@types/node/",\
+      ["npm:20.14.9", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.14.9-a4571e1932-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.12.11"],\
-          ["undici-types", "npm:5.26.5"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:20.13.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.13.0-88c0bd0276-10c0.zip/node_modules/@types/node/",\
-        "packageDependencies": [\
-          ["@types/node", "npm:20.13.0"],\
+          ["@types/node", "npm:20.14.9"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -1849,7 +1841,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/jest-worker-npm-27.5.1-1c110b5894-10c0.zip/node_modules/jest-worker/",\
         "packageDependencies": [\
           ["jest-worker", "npm:27.5.1"],\
-          ["@types/node", "npm:20.12.11"],\
+          ["@types/node", "npm:20.14.9"],\
           ["merge-stream", "npm:2.0.0"],\
           ["supports-color", "npm:8.1.1"]\
         ],\
@@ -3295,7 +3287,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["vsclay", "workspace:."],\
-          ["@types/node", "npm:20.13.0"],\
+          ["@types/node", "npm:20.14.9"],\
           ["@types/vscode", "npm:1.90.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
