@@ -30,7 +30,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:22.13.1"],\
           ["@types/vscode", "npm:1.92.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
-          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
+          ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
           ["vsce", "npm:2.15.0"],\
           ["webpack", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.97.1"],\
           ["webpack-cli", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.1.4"]\
@@ -3094,7 +3094,7 @@ const RAW_RUNTIME_STATE =
           ["micromatch", "npm:4.0.5"],\
           ["semver", "npm:7.6.0"],\
           ["source-map", "npm:0.7.4"],\
-          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
+          ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
           ["webpack", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.97.1"]\
         ],\
         "packagePeers": [\
@@ -3138,10 +3138,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07", {\
-        "packageLocation": "../../../../cache/others/berry/cache/typescript-patch-fe43cd9db9-10c0.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5", {\
+        "packageLocation": "../../../../cache/others/berry/cache/typescript-patch-6da68bae26-10c0.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
+          ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3282,7 +3282,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:22.13.1"],\
           ["@types/vscode", "npm:1.92.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
-          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
+          ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
           ["vsce", "npm:2.15.0"],\
           ["webpack", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.97.1"],\
           ["webpack-cli", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:5.1.4"]\
