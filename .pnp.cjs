@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@types/node", "npm:22.13.1"],\
-          ["@types/vscode", "npm:1.92.0"],\
+          ["@types/vscode", "npm:1.97.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["vsce", "npm:2.15.0"],\
@@ -216,10 +216,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/vscode", [\
-      ["npm:1.92.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-vscode-npm-1.92.0-a23ad08e5e-10c0.zip/node_modules/@types/vscode/",\
+      ["npm:1.97.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-vscode-npm-1.97.0-a04fa993c7-10c0.zip/node_modules/@types/vscode/",\
         "packageDependencies": [\
-          ["@types/vscode", "npm:1.92.0"]\
+          ["@types/vscode", "npm:1.97.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3288,7 +3288,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["vsclay", "workspace:."],\
           ["@types/node", "npm:22.13.1"],\
-          ["@types/vscode", "npm:1.92.0"],\
+          ["@types/vscode", "npm:1.97.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.1"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["vsce", "npm:2.15.0"],\
@@ -6140,7 +6140,7 @@ class MountFS extends BasePortableFakeFS {
         if (this.notMount.has(filePath))
           continue;
         try {
-          if (this.typeCheck !== null && (this.baseFs.lstatSync(filePath).mode & fs.constants.S_IFMT) !== this.typeCheck) {
+          if (this.typeCheck !== null && (this.baseFs.statSync(filePath).mode & fs.constants.S_IFMT) !== this.typeCheck) {
             this.notMount.add(filePath);
             continue;
           }
@@ -9153,18 +9153,20 @@ Require stack:
     }
     return false;
   };
-  const originalExtensionJSFunction = require$$0.Module._extensions[`.js`];
-  require$$0.Module._extensions[`.js`] = function(module, filename) {
-    if (filename.endsWith(`.js`)) {
-      const pkg = readPackageScope(filename);
-      if (pkg && pkg.data?.type === `module`) {
-        const err = ERR_REQUIRE_ESM(filename, module.parent?.filename);
-        Error.captureStackTrace(err);
-        throw err;
+  if (!process.features.require_module) {
+    const originalExtensionJSFunction = require$$0.Module._extensions[`.js`];
+    require$$0.Module._extensions[`.js`] = function(module, filename) {
+      if (filename.endsWith(`.js`)) {
+        const pkg = readPackageScope(filename);
+        if (pkg && pkg.data?.type === `module`) {
+          const err = ERR_REQUIRE_ESM(filename, module.parent?.filename);
+          Error.captureStackTrace(err);
+          throw err;
+        }
       }
-    }
-    originalExtensionJSFunction.call(this, module, filename);
-  };
+      originalExtensionJSFunction.call(this, module, filename);
+    };
+  }
   const originalDlopen = process.dlopen;
   process.dlopen = function(...args) {
     const [module, filename, ...rest] = args;
