@@ -972,10 +972,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cross-spawn", [\
-      ["npm:7.0.3", {\
-        "packageLocation": "../../.yarn/berry/cache/cross-spawn-npm-7.0.3-e4ff3e65b3-10c0.zip/node_modules/cross-spawn/",\
+      ["npm:7.0.6", {\
+        "packageLocation": "../../.yarn/berry/cache/cross-spawn-npm-7.0.6-264bddf921-10c0.zip/node_modules/cross-spawn/",\
         "packageDependencies": [\
-          ["cross-spawn", "npm:7.0.3"],\
+          ["cross-spawn", "npm:7.0.6"],\
           ["path-key", "npm:3.1.1"],\
           ["shebang-command", "npm:2.0.0"],\
           ["which", "npm:2.0.2"]\
@@ -1411,7 +1411,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/foreground-child-npm-3.1.1-77e78ed774-10c0.zip/node_modules/foreground-child/",\
         "packageDependencies": [\
           ["foreground-child", "npm:3.1.1"],\
-          ["cross-spawn", "npm:7.0.3"],\
+          ["cross-spawn", "npm:7.0.6"],\
           ["signal-exit", "npm:4.1.0"]\
         ],\
         "linkType": "HARD"\
@@ -3367,7 +3367,7 @@ const RAW_RUNTIME_STATE =
           ["@webpack-cli/serve", "virtual:5b3e9a8fcda04128633f15997cdcda3fe9cb91c6574f6ef0f9ce678afac72390b1ccd8a44ee5232c13f85de9fccb3d94852dba04b4507828dc3966b0a4286300#npm:3.0.1"],\
           ["colorette", "npm:2.0.20"],\
           ["commander", "npm:12.1.0"],\
-          ["cross-spawn", "npm:7.0.3"],\
+          ["cross-spawn", "npm:7.0.6"],\
           ["envinfo", "npm:7.14.0"],\
           ["fastest-levenshtein", "npm:1.0.16"],\
           ["import-local", "npm:3.1.0"],\
