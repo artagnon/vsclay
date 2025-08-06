@@ -3208,10 +3208,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tmp", [\
-      ["npm:0.2.3", {\
-        "packageLocation": "../../.yarn/berry/cache/tmp-npm-0.2.3-ac2a701365-10c0.zip/node_modules/tmp/",\
+      ["npm:0.2.4", {\
+        "packageLocation": "../../.yarn/berry/cache/tmp-npm-0.2.4-59e60ac7e1-10c0.zip/node_modules/tmp/",\
         "packageDependencies": [\
-          ["tmp", "npm:0.2.3"]\
+          ["tmp", "npm:0.2.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3404,7 +3404,7 @@ const RAW_RUNTIME_STATE =
           ["parse-semver", "npm:1.1.1"],\
           ["read", "npm:1.0.7"],\
           ["semver", "npm:5.7.2"],\
-          ["tmp", "npm:0.2.3"],\
+          ["tmp", "npm:0.2.4"],\
           ["typed-rest-client", "npm:1.8.11"],\
           ["url-join", "npm:4.0.1"],\
           ["vsce", "npm:2.15.0"],\
