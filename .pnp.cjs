@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@types/node", "npm:24.10.4"],\
-          ["@types/vscode", "npm:1.97.0"],\
+          ["@types/vscode", "npm:1.107.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.4"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["vsce", "npm:2.15.0"],\
@@ -242,10 +242,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/vscode", [\
-      ["npm:1.97.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-vscode-npm-1.97.0-a04fa993c7-10c0.zip/node_modules/@types/vscode/",\
+      ["npm:1.107.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-vscode-npm-1.107.0-81c8c2dbf2-10c0.zip/node_modules/@types/vscode/",\
         "packageDependencies": [\
-          ["@types/vscode", "npm:1.97.0"]\
+          ["@types/vscode", "npm:1.107.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3344,7 +3344,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@types/node", "npm:24.10.4"],\
-          ["@types/vscode", "npm:1.97.0"],\
+          ["@types/vscode", "npm:1.107.0"],\
           ["ts-loader", "virtual:d2cc84c04699a408b58edec66f163206928889d0e27e4818188767212cfb2055d0e6f359a74685d420e4ca08c685b124e3a7ceae633c183efa1407bea528015e#npm:9.5.4"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["vsce", "npm:2.15.0"],\
