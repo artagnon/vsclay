@@ -103,7 +103,7 @@
     "package": "yarn webpack --mode production --devtool hidden-source-map"
   },
   "devDependencies": {
-    "@types/node": "^22.1.0",
+    "@types/node": "^24.0.0",
     "@types/vscode": "^1.92.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
