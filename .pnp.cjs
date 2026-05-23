@@ -2550,10 +2550,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["qs", [\
-      ["npm:6.14.2", {\
-        "packageLocation": "../../.yarn/berry/cache/qs-npm-6.14.2-dc981e3564-10c0.zip/node_modules/qs/",\
+      ["npm:6.15.2", {\
+        "packageLocation": "../../.yarn/berry/cache/qs-npm-6.15.2-4fbd3d7cd4-10c0.zip/node_modules/qs/",\
         "packageDependencies": [\
-          ["qs", "npm:6.14.2"],\
+          ["qs", "npm:6.15.2"],\
           ["side-channel", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
@@ -3175,7 +3175,7 @@ const RAW_RUNTIME_STATE =
       ["npm:1.8.11", {\
         "packageLocation": "../../.yarn/berry/cache/typed-rest-client-npm-1.8.11-7be28960b2-10c0.zip/node_modules/typed-rest-client/",\
         "packageDependencies": [\
-          ["qs", "npm:6.14.2"],\
+          ["qs", "npm:6.15.2"],\
           ["tunnel", "npm:0.0.6"],\
           ["typed-rest-client", "npm:1.8.11"],\
           ["underscore", "npm:1.13.6"]\
