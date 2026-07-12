@@ -1,7 +1,9 @@
-dist/
+out
+dist
+.vscode-test/
 *.vsix
-*.tsbuildinfo
 .DS_Store
+
 .yarn/*
 !.yarn/cache
 !.yarn/patches
